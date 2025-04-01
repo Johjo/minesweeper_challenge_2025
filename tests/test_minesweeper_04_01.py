@@ -10,6 +10,8 @@
 # 01*211
 #
 
+def test_minesweeper():
+    pass
 
 
 
