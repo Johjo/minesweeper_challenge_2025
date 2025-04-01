@@ -10,7 +10,7 @@
 # 01*211
 #
 
-def minesweeper(param):
+def minesweeper(field: str) -> str:
     pass
 
 
