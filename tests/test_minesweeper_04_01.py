@@ -10,6 +10,10 @@
 # 01*211
 #
 
+def minesweeper(param):
+    pass
+
+
 def test_minesweeper():
     assert minesweeper(""".*.**.
 ....*.
