@@ -11,7 +11,7 @@
 #
 
 def minesweeper(field: str) -> str:
-    pass
+    return ""
 
 
 def test_minesweeper():
