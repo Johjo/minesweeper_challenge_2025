@@ -11,7 +11,13 @@
 #
 
 def test_minesweeper():
-    pass
+    assert minesweeper(""".*.**.
+....*.
+..*...""" == """
+1*2**2
+1234*2
+01*211
+""")
 
 
 
