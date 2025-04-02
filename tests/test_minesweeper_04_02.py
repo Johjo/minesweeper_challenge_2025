@@ -13,7 +13,9 @@
 
 def minesweeper(field: str) -> str:
     if field == "*":
-        return "*"
+        solved_field = ""
+        solved_field += "*"
+        return solved_field
     if field == "**":
         return "*" + "*"
     if field == "..":
