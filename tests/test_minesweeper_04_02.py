@@ -17,3 +17,7 @@ def minesweeper(field: str) -> str:
 
 def test_minesweeper_01():
     assert minesweeper(".") == "0"
+
+def test_minesweeper_02():
+    assert minesweeper("*") == "*"
+
