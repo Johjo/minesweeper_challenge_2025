@@ -27,3 +27,6 @@ def test_minesweeper_02():
 
 def test_minesweeper_03():
     assert minesweeper("..") == "00"
+
+def test_minesweeper_04():
+    assert minesweeper("**") == "**"
