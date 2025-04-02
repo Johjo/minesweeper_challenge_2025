@@ -22,7 +22,10 @@ def minesweeper(field: str) -> str:
         solved_field += "*"
         return solved_field
     if field == "..":
-        return "0" + "0"
+        solved_field = ""
+        solved_field += "0"
+        solved_field += "0"
+        return solved_field
 
     return "0"
 
