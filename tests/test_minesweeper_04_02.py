@@ -4,3 +4,4 @@
 # for the mine field : ** the solved mine field is **
 # for the mine field : .* the solved mine field is 1*
 # for the mine field : *. the solved mine field is *1
+# for the mine field : ... the solved mine field is 000
