@@ -27,7 +27,9 @@ def minesweeper(field: str) -> str:
         solved_field += "0"
         return solved_field
 
-    return "0"
+    solved_field = ""
+    solved_field += "0"
+    return solved_field
 
 
 def test_minesweeper_01():
