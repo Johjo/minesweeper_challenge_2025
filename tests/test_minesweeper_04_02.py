@@ -11,3 +11,5 @@
 # for the mine field : .*. the solved mine field is 1*1
 
 
+def test_minesweeper_01():
+    assert minesweeper(".") == "0"
