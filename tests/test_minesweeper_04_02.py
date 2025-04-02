@@ -23,3 +23,5 @@ def test_minesweeper_01():
 def test_minesweeper_02():
     assert minesweeper("*") == "*"
 
+def test_minesweeper_03():
+    assert minesweeper("..") == "00"
