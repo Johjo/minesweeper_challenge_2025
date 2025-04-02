@@ -12,7 +12,7 @@
 
 
 def minesweeper(param):
-    pass
+    return ""
 
 
 def test_minesweeper_01():
