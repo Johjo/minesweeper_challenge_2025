@@ -11,7 +11,7 @@
 # for the mine field : .*. the solved mine field is 1*1
 
 
-def minesweeper(param):
+def minesweeper(field: str):
     return "0"
 
 
