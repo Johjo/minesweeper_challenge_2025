@@ -32,6 +32,7 @@ def solve_cell(field, x):
     [".", "0"],
     ["*", "*"],
     ["..", "00"],
+    ["**", "**"],
 
 ])
 def test_minesweeper(field, expected):
