@@ -15,10 +15,10 @@ import pytest
 def minesweeper(field):
     solved_field = ""
     if len(field) > 1:
-        solved_field = solve_cell(field, 0) + solve_cell(field, 1)
+        solved_field += solve_cell(field, 0) + solve_cell(field, 1)
         return solved_field
     if len(field) > 0:
-        solved_field = solve_cell(field, 0)
+        solved_field += solve_cell(field, 0)
         return solved_field
     return solved_field
 
