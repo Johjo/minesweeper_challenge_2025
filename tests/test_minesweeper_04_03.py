@@ -16,9 +16,9 @@ def minesweeper(field):
     if field == "..":
         return "00"
     if len(field) == 1:
-        if field == ".":
+        if field[0] == ".":
             return "0"
-        if field == "*":
+        if field[0] == "*":
             return "*"
     return ""
 
