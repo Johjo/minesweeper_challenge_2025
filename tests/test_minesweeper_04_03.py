@@ -17,11 +17,14 @@ def minesweeper(field):
         return "00"
     if len(field) == 1:
         x = 0
-        if field[x] == ".":
-            return "0"
-        if field[x] == "*":
-            return "*"
+        return solve_cell(field, x)
     return ""
+
+def solve_cell(field, x):
+    if field[x] == ".":
+        return "0"
+    if field[x] == "*":
+        return "*"
 
 
 @pytest.mark.parametrize("field, expected", [
