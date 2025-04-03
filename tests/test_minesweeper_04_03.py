@@ -15,10 +15,11 @@ import pytest
 def minesweeper(field):
     if field == "..":
         return "00"
-    if field == ".":
-        return "0"
-    if field == "*":
-        return "*"
+    if len(field) == 1:
+        if field == ".":
+            return "0"
+        if field == "*":
+            return "*"
     return ""
 
 
