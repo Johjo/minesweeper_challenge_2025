@@ -16,8 +16,7 @@ def minesweeper(field):
     if field == "..":
         return "00"
     if len(field) == 1:
-        x = 0
-        return solve_cell(field, x)
+        return solve_cell(field, 0)
     return ""
 
 def solve_cell(field, x):
