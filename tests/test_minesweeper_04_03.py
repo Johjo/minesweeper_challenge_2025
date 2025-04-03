@@ -15,8 +15,9 @@ import pytest
 def minesweeper(field):
     return ""
 
-@pytest.mark.parametrize("field, expected", [[
-    "", ""
-]])
+
+@pytest.mark.parametrize("field, expected", [
+    ["", ""],
+])
 def test_minesweeper(field, expected):
-    assert minesweeper(field="") == ""
+    assert minesweeper(field) == expected
