@@ -15,12 +15,16 @@ import pytest
 def minesweeper(field):
     if field == ".":
         return "0"
+    if field == "*":
+        return "*"
+
     return ""
 
 
 @pytest.mark.parametrize("field, expected", [
     ["", ""],
     [".", "0"],
+    ["*", "*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
