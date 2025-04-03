@@ -17,7 +17,8 @@ def minesweeper(field):
         return "0"
     if field == "*":
         return "*"
-
+    if field == "..":
+        return "00"
     return ""
 
 
@@ -25,6 +26,8 @@ def minesweeper(field):
     ["", ""],
     [".", "0"],
     ["*", "*"],
+    ["..", "00"],
+
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
