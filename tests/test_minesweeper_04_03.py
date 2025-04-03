@@ -9,10 +9,14 @@
 # for the mine field : *.. the solved mine field is *10
 # for the mine field : *.* the solved mine field is *2*
 # for the mine field : .*. the solved mine field is 1*1
+import pytest
+
 
 def minesweeper(field):
     return ""
 
-
-def test_minesweeper():
+@pytest.mark.parametrize("field, expected", [[
+    "", ""
+]])
+def test_minesweeper(field, expected):
     assert minesweeper(field="") == ""
