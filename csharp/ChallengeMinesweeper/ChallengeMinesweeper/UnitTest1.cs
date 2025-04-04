@@ -22,10 +22,10 @@ public class Tests
     private String minesweeper(string field)
     {
         if (field == ".")
-            return String.Concat(Enumerable.Repeat("0",1));
+            return String.Concat(Enumerable.Repeat("0",field.Length));
 
         if (field == "..")
-            return String.Concat(Enumerable.Repeat("0",2));
+            return String.Concat(Enumerable.Repeat("0",field.Length));
 
         
         return field;
