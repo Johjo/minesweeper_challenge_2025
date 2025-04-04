@@ -30,8 +30,8 @@ public class Tests
         Assert.That(minesweeper("**"), Is.EqualTo("**"));
     }
 
-    private String minesweeper(string s)
+    private String minesweeper(string field)
     {
-        return s;
+        return field;
     }
 }
