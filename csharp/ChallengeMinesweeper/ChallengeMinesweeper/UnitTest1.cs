@@ -19,19 +19,26 @@ public class Tests
     {
     }
 
+    private String minesweeper(string field)
+    {
+        return field;
+    }
+
     [Test]
     public void Test1()
     {
         Assert.That(minesweeper("*"), Is.EqualTo("*"));
     }
+
     [Test]
     public void Test2()
     {
         Assert.That(minesweeper("**"), Is.EqualTo("**"));
     }
-
-    private String minesweeper(string field)
+    
+    [Test]
+    public void Test3()
     {
-        return field;
+        Assert.That(minesweeper("***"), Is.EqualTo("***"));
     }
 }
