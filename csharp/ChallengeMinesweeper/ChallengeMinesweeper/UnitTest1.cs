@@ -21,10 +21,18 @@ public class Tests
 
     private String minesweeper(string field)
     {
+        if (field == ".")
+            return "0";
+        
         return field;
     }
 
     [Test]
+    public void Test4()
+    {
+        Assert.That(minesweeper("."), Is.EqualTo("0"));
+    }
+   [Test]
     public void Test1()
     {
         Assert.That(minesweeper("*"), Is.EqualTo("*"));
