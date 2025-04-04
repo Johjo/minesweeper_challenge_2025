@@ -25,7 +25,7 @@ public class Tests
             return String.Concat(Enumerable.Repeat("0",1));
 
         if (field == "..")
-            return "00";
+            return String.Concat(Enumerable.Repeat("0",2));
 
         
         return field;
