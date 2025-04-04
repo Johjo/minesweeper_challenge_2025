@@ -22,11 +22,11 @@ public class Tests
     [Test]
     public void Test1()
     {
-        minesweeper("*");
+        Assert.That(minesweeper("*"), Is.EqualTo("*"));
     }
 
-    private void minesweeper(string s)
+    private String minesweeper(string s)
     {
-        
+        return "*";
     }
 }
