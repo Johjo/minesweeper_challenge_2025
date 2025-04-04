@@ -23,10 +23,6 @@ public class Tests
     {
         if (field[0] == '.')
             return String.Concat(Enumerable.Repeat("0",field.Length));
-
-        if (field == "..")
-            return String.Concat(Enumerable.Repeat("0",field.Length));
-
         
         return field;
     }
