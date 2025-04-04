@@ -22,5 +22,11 @@ public class Tests
     [Test]
     public void Test1()
     {
+        minesweeper("*");
+    }
+
+    private void minesweeper(string s)
+    {
+        
     }
 }
