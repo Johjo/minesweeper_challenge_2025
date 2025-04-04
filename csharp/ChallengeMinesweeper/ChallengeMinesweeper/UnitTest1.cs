@@ -24,9 +24,14 @@ public class Tests
     {
         Assert.That(minesweeper("*"), Is.EqualTo("*"));
     }
+    [Test]
+    public void Test2()
+    {
+        Assert.That(minesweeper("**"), Is.EqualTo("**"));
+    }
 
     private String minesweeper(string s)
     {
-        return "*";
+        return s;
     }
 }
