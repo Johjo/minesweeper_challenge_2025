@@ -1,13 +1,10 @@
 namespace ChallengeMinesweeper;
-/* Erreur :
-    String lengths are both 2. Strings differ at index 0.
-    Expected: "00"
-    But was:  "**"
+/* Observation :
+ Je cosntate que j'ai les concepts de résoudre une cellule et que j'en ai besoin lorsque je travaille sur une ligne
  */
 
-/*
- Action : Je constate qu'il peut aussi y avoir des cases sans mine.
- Je vais valider ce concept rapidement
+/* Action
+ Je vais extraire ce concept
 */
 
 
