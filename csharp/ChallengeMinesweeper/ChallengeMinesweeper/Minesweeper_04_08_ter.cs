@@ -1,11 +1,10 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\Minesweeper_04_08_ter.cs(36,29): error CS1002: ; attendu [C:\Projets\dojo-yt
-reza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.csproj]
+je n'ai toujours pas mis en évidence la duplication de construction d'un champ résolu
  */
 
 /* Action
-Il me manque un point virgule 
+
 */
 
 
