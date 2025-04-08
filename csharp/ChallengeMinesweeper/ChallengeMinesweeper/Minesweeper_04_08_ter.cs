@@ -19,6 +19,7 @@ public class TestMineSweeper0408Ter
     [TestCase("*", "*")]
     [TestCase("**", "**")]
     [TestCase("..", "00")]
+    [TestCase("...", "000")]
     public void Test1(string unsolvedField, string solvedField)
     {
         Assert.That(Minesweeper(unsolvedField), Is.EqualTo(solvedField));
