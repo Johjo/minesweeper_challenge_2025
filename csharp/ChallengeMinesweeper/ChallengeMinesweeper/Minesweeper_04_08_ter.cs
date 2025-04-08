@@ -1,12 +1,11 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\Minesweeper_04_08_ter.cs(38,17): error CS0136: Impossible de déclarer une va 
-riable locale ou un paramètre nommé 'solvedField' dans cette portée, car ce nom est utilisé dans une portée locale englobante pour définir une variable locale ou un paramètre [C:\ 
-Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.csproj]
+C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\Minesweeper_04_08_ter.cs(36,29): error CS1002: ; attendu [C:\Projets\dojo-yt
+reza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.csproj]
  */
 
 /* Action
-Je vais déclarer solvedField globalement 
+Il me manque un point virgule 
 */
 
 
@@ -33,7 +32,7 @@ public class TestMineSweeper0408Ter
         
         if (unsolvedField == "")
         {
-            solvedField = ""
+            solvedField = "";
             return solvedField;
         }
 
