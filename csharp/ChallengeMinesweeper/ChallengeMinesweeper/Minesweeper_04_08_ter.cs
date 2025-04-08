@@ -1,15 +1,11 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Erreur
-      Expected string length 2 but was 1. Strings differ at index 1.
-  Expected: "00"
-  But was:  "0"
+je vois à nouveau la possibilité de traiter une seule mine.
 
  */
 
 /* Action
- Je ne peux pas faire cette transformation car la double ligne passe ici.
- Hypothèse : Je vais inverser le code
+ je vais extraire une méthode pour traiter une seule cellule
 */
 
 
