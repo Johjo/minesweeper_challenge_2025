@@ -35,14 +35,14 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "") 
             return "";
 
-        if (unsolvedField == ".")
-            return "0";
-        if (unsolvedField == "*")
-            return "*";
-
         if (unsolvedField == "**")
             return "**";
 
-        return "00";
+        if (unsolvedField == "..")
+            return "00";
+        
+        if (unsolvedField == ".")
+            return "0";
+        return "*";
     }
 }
