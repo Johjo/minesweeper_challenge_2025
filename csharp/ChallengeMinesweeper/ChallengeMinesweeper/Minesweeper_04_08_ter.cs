@@ -41,7 +41,9 @@ public class TestMineSweeper0408Ter
             return solvedField;
         }
 
-        solvedField = SolveCell(unsolvedField);
+        if (unsolvedField.Length == 1)
+            solvedField = SolveCell(unsolvedField);
+        
         return solvedField;
         
     }
