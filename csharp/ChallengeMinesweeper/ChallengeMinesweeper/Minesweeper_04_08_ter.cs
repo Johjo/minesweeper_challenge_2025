@@ -1,13 +1,10 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\Minesweeper_04_08_ter.cs(49,13): error CS0019: Impossible d'appliquer l'opér
-ateur '==' aux opérandes de type 'char' et 'string' [C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.cs 
-proj]
-
+Le champ ne contenant que des mines n'est pas géré
  */
 
 /* Action
-Je dois comparer un char avec un char
+Je vais reproduire
 
 */
 
@@ -35,7 +32,7 @@ public class TestMineSweeper0408Ter
             return "";
 
         if (unsolvedField == "**")
-            return "**";
+            return SolveCell(unsolvedField) + SolveCell(unsolvedField);
 
         if (unsolvedField == "..")
             return SolveCell(unsolvedField) + SolveCell(unsolvedField);
