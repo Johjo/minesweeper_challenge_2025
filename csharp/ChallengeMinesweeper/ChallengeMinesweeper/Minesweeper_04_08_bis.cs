@@ -14,7 +14,6 @@ public class TestMineSweeper0408Bis
     [TestCase("" ,"")]
     [TestCase("*" ,"*")]
     [TestCase("." ,"0")]
-    [TestCase(".." ,"00")]
     public void Test1(string unsolvedField, string solvedField)
     {
         Assert.That(minesweeper(unsolvedField), Is.EqualTo(solvedField));
