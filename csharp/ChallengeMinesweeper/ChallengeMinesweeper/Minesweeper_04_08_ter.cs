@@ -1,10 +1,9 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Avant cela, je constate que j'ai 2 fois le solve cell
+Le nombre de fois que je fais un solve cell semble dépendre du nombre de cellule
  */
 
 /* Action
-Cela se produit quand mon champ de mine contient une ligne de 2 cellules.
 Je vais mettre cela en évidence
 */
 
