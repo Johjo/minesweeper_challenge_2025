@@ -1,13 +1,13 @@
 namespace ChallengeMinesweeper;
 /* Erreur :
-     Expected string length 2 but was 1. Strings differ at index 1.
-  Expected: "**"
-  But was:  "*"
+    String lengths are both 2. Strings differ at index 0.
+    Expected: "00"
+    But was:  "**"
  */
 
 /*
- Action : Je découvre que je peux avoir plusieurs cases dans une ligne.
- je vais gérer cette ligne
+ Action : Je constate qu'il peut aussi y avoir des cases sans mine.
+ Je vais valider ce concept rapidement
 */
 
 
@@ -22,6 +22,7 @@ public class TestMineSweeper0408Ter
     [TestCase(".", "0")]
     [TestCase("*", "*")]
     [TestCase("**", "**")]
+    [TestCase("..", "00")]
     public void Test1(string unsolvedField, string solvedField)
     {
         Assert.That(Minesweeper(unsolvedField), Is.EqualTo(solvedField));
@@ -37,6 +38,9 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "*")
             return "*";
 
-        return "**";
+        if (unsolvedField == "**")
+            return "**";
+
+        return "00";
     }
 }
