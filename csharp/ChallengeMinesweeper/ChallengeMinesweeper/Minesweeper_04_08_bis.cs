@@ -12,6 +12,11 @@ public class TestMineSweeper0408Bis
     [TestCase("" ,"")]
     public void Test1(string unsolvedField, string solvedField)
     {
+        minesweeper(unsolvedField);
+    }
+
+    private void minesweeper(string unsolvedField)
+    {
         
     }
 }
