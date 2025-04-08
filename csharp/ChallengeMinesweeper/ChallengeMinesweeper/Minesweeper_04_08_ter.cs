@@ -1,8 +1,10 @@
 namespace ChallengeMinesweeper;
 
-// Transformations : 
-// (unconditional->if) splitting the execution path
-// (constant->constant+) a simple constant to a more complex constant
+// Erreur : Le nom 'Minesweeper' n'existe 
+// pas dans le contexte actuel [C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.csproj]
+
+// Action : je dois créer la méthode Minesweeper
+
 
 public class TestMineSweeper0408Ter
 {
@@ -13,6 +15,11 @@ public class TestMineSweeper0408Ter
 
     [TestCase("", "")]
     public void Test1(string unsolvedField, string solvedField)
+    {
+        Minesweeper(unsolvedField);
+    }
+
+    private void Minesweeper(string unsolvedField)
     {
     }
 }
