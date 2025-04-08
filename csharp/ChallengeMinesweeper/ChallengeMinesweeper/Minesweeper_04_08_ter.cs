@@ -1,10 +1,15 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Je vois que je répète plusieurs fois la même chose dans les conditions
+  Message d'erreur :
+     Expected string length 3 but was 2. Strings differ at index 2.
+  Expected: "000"
+  But was:  "00"
+  -------------^
+
  */
 
 /* Action
-
+    je vais rajouter une nouvelle ligne
 */
 
 public class TestMineSweeper0408Ter
