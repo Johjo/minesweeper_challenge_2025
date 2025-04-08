@@ -1,15 +1,14 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-     String lengths are both 2. Strings differ at index 0.
-  Expected: "00"
-  But was:  "**"
+C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\Minesweeper_04_08_ter.cs(49,13): error CS0019: Impossible d'appliquer l'opér
+ateur '==' aux opérandes de type 'char' et 'string' [C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.cs 
+proj]
 
  */
 
 /* Action
- Je constate que solveCell ne fait pas ce que j'attends. Ce qu'il se passe, c'est que je ne regarde pas
- le contenu du cellule mais celui du champ de mine.
- On va regarder le contenu de la cellule
+Je dois comparer un char avec un char
+
 */
 
 
@@ -46,7 +45,7 @@ public class TestMineSweeper0408Ter
 
     private static string SolveCell(string unsolvedField)
     {
-        if (unsolvedField[0] == ".")
+        if (unsolvedField[0] == '.')
             return "0";
         return "*";
     }
