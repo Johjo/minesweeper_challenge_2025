@@ -1,5 +1,7 @@
 namespace ChallengeMinesweeper;
 
+// Transformation : pas de code à un code qui ne renvoit rien
+
 public class TestMineSweeper0408
 {
     [SetUp]
@@ -10,6 +12,11 @@ public class TestMineSweeper0408
     [Test]
     public void Test1()
     {
+        minesweeper();
     }
 
+    private void minesweeper()
+    {
+        
+    }
 }
