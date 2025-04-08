@@ -1,10 +1,15 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Je vois que je peux utiliser le concept solveCell dans la gestion de deux cellules vides
+     String lengths are both 2. Strings differ at index 0.
+  Expected: "00"
+  But was:  "**"
 
  */
 
 /* Action
+ Je constate que solveCell ne fait pas ce que j'attends. Ce qu'il se passe, c'est que je ne regarde pas
+ le contenu du cellule mais celui du champ de mine.
+ On va regarder le contenu de la cellule
 */
 
 
@@ -41,7 +46,7 @@ public class TestMineSweeper0408Ter
 
     private static string SolveCell(string unsolvedField)
     {
-        if (unsolvedField == ".")
+        if (unsolvedField[0] == ".")
             return "0";
         return "*";
     }
