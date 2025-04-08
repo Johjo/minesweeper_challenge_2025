@@ -1,10 +1,12 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Le nombre de fois que je fais un solve cell semble dépendre du nombre de cellule
+C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\Minesweeper_04_08_ter.cs(38,17): error CS0136: Impossible de déclarer une va 
+riable locale ou un paramètre nommé 'solvedField' dans cette portée, car ce nom est utilisé dans une portée locale englobante pour définir une variable locale ou un paramètre [C:\ 
+Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.csproj]
  */
 
 /* Action
-Je vais mettre cela en évidence
+Je vais déclarer solvedField globalement 
 */
 
 
@@ -27,19 +29,21 @@ public class TestMineSweeper0408Ter
 
     private string Minesweeper(string unsolvedField)
     {
+        var solvedField = "";
+        
         if (unsolvedField == "")
         {
-            var solvedField = "";
+            solvedField = ""
             return solvedField;
         }
 
         if (unsolvedField.Length == 2)
         {
-            var solvedField = SolveCell(unsolvedField) + SolveCell(unsolvedField);
+             solvedField = SolveCell(unsolvedField) + SolveCell(unsolvedField);
             return solvedField;
         }
 
-        var solvedField = SolveCell(unsolvedField);
+        solvedField = SolveCell(unsolvedField);
         return solvedField;
         
     }
