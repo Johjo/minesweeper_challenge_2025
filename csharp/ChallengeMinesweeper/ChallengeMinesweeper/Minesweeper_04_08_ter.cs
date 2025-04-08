@@ -32,13 +32,11 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "")
         {
             solvedField = "";
-            return solvedField;
         }
 
         if (unsolvedField.Length == 2)
         {
              solvedField = SolveCell(unsolvedField) + SolveCell(unsolvedField);
-            return solvedField;
         }
 
         if (unsolvedField.Length == 1)
