@@ -1,7 +1,8 @@
 namespace ChallengeMinesweeper;
 
-// Je n'ai pas trouvé de transformation prioritaire, j'aborde en fait un nouveau concept
-// Transformation : (unconditional->if) splitting the execution path  
+// Transformations : 
+// (unconditional->if) splitting the execution path
+// (constant->constant+) a simple constant to a more complex constant
 
 public class TestMineSweeper0408Bis
 {
@@ -12,6 +13,7 @@ public class TestMineSweeper0408Bis
     
     [TestCase("" ,"")]
     [TestCase("*" ,"*")]
+    [TestCase("." ,"0")]
     public void Test1(string unsolvedField, string solvedField)
     {
         Assert.That(minesweeper(unsolvedField), Is.EqualTo(solvedField));
@@ -21,6 +23,8 @@ public class TestMineSweeper0408Bis
     {
         if (unsolvedField == "")
             return "";
+        if (unsolvedField == ".")
+            return "0";
         return "*";
     }
 }
