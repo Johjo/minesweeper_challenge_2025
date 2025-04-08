@@ -9,8 +9,8 @@ public class TestMineSweeper0408
     {
     }
     
-    [Test]
-    public void Test1()
+    [TestCase("." ,"0")]
+    public void Test1(string unsolvedField, string solvedField)
     {
         Assert.That(minesweeper(), Is.EqualTo("0"));
     }
