@@ -29,10 +29,6 @@ public class TestMineSweeper0408Ter
     {
         var solvedField = "";
         
-        if (unsolvedField == "")
-        {
-            solvedField = "";
-        }
 
         if (unsolvedField.Length == 2)
         {
