@@ -1,6 +1,6 @@
 namespace ChallengeMinesweeper;
 
-// Transformation : ({}–>nil) no code at all->code that employs nil  
+// Transformation : (nil->constant)  
 
 public class TestMineSweeper0408Bis
 {
@@ -12,11 +12,11 @@ public class TestMineSweeper0408Bis
     [TestCase("" ,"")]
     public void Test1(string unsolvedField, string solvedField)
     {
-        minesweeper(unsolvedField);
+        Assert.That(minesweeper(unsolvedField), Is.EqualTo(solvedField));
     }
 
-    private void minesweeper(string unsolvedField)
+    private string minesweeper(string unsolvedField)
     {
-        
+        return "";
     }
 }
