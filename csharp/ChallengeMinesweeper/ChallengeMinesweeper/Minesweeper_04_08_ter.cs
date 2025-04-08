@@ -31,7 +31,7 @@ public class TestMineSweeper0408Ter
         if (unsolvedField.Length >= 1)
             solvedField += SolveCell(unsolvedField);
 
-        if (unsolvedField.Length == 2)
+        if (unsolvedField.Length >= 2)
         {
             solvedField += SolveCell(unsolvedField);
         }
