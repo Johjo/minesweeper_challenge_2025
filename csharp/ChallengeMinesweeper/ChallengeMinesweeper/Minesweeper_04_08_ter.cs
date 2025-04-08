@@ -1,10 +1,15 @@
 namespace ChallengeMinesweeper;
 /* Observation :
- Je cosntate que j'ai les concepts de résoudre une cellule et que j'en ai besoin lorsque je travaille sur une ligne
+Erreur
+      Expected string length 2 but was 1. Strings differ at index 1.
+  Expected: "00"
+  But was:  "0"
+
  */
 
 /* Action
- Je vais extraire ce concept
+ Je ne peux pas faire cette transformation car la double ligne passe ici.
+ Hypothèse : Je vais inverser le code
 */
 
 
@@ -30,7 +35,7 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "") 
             return "";
 
-        if (unsolvedField[0] == '.')
+        if (unsolvedField == ".")
             return "0";
         if (unsolvedField == "*")
             return "*";
