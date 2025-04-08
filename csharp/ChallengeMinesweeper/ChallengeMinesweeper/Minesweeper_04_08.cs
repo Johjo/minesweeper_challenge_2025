@@ -1,6 +1,6 @@
 namespace ChallengeMinesweeper;
 
-// Transformation : pas de code à un code qui ne renvoit rien
+// Transformation : Code qui ne renvoit rien à un code qui renvoie une constante (fausse)
 
 public class TestMineSweeper0408
 {
@@ -12,11 +12,11 @@ public class TestMineSweeper0408
     [Test]
     public void Test1()
     {
-        minesweeper();
+        Assert.That(minesweeper(), Is.EqualTo("0"));
     }
 
-    private void minesweeper()
+    private String minesweeper()
     {
-        
+        return "0";
     }
 }
