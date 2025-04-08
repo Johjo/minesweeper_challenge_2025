@@ -1,6 +1,6 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-je n'ai toujours pas mis en évidence la duplication de construction d'un champ résolu
+Je vois que je répète plusieurs fois la même chose dans les conditions
  */
 
 /* Action
