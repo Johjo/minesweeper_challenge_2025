@@ -7,7 +7,6 @@ je n'ai toujours pas mis en évidence la duplication de construction d'un champ 
 
 */
 
-
 public class TestMineSweeper0408Ter
 {
     [SetUp]
@@ -31,14 +30,14 @@ public class TestMineSweeper0408Ter
 
         if (unsolvedField.Length == 1)
             solvedField += SolveCell(unsolvedField);
-        
+
         if (unsolvedField.Length == 2)
         {
-             solvedField += SolveCell(unsolvedField) + SolveCell(unsolvedField);
+            solvedField += SolveCell(unsolvedField);
+            solvedField += SolveCell(unsolvedField);
         }
 
         return solvedField;
-        
     }
 
     private static string SolveCell(string unsolvedField)
