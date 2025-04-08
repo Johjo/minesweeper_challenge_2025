@@ -1,10 +1,10 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Le champ ne contenant que des mines n'est pas géré
+Je constate que je fais 0, 1 ou 2 fois le solveCell
  */
 
 /* Action
-Je vais reproduire
+Je vais essayer de mettre en évidence les éléments atomatiques du code
 
 */
 
