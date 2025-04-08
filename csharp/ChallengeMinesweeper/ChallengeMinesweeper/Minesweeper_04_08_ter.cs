@@ -30,7 +30,7 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "") 
             return "";
 
-        if (unsolvedField == ".")
+        if (unsolvedField[0] == '.')
             return "0";
         if (unsolvedField == "*")
             return "*";
