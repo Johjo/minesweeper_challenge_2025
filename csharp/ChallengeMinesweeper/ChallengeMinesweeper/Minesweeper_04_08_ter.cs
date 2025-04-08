@@ -1,11 +1,11 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-Je constate que je fais 0, 1 ou 2 fois le solveCell
+Avant cela, je constate que j'ai 2 fois le solve cell
  */
 
 /* Action
-Je vais essayer de mettre en évidence les éléments atomatiques du code
-
+Cela se produit quand mon champ de mine contient une ligne de 2 cellules.
+Je vais mettre cela en évidence
 */
 
 
@@ -31,10 +31,7 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "") 
             return "";
 
-        if (unsolvedField == "**")
-            return SolveCell(unsolvedField) + SolveCell(unsolvedField);
-
-        if (unsolvedField == "..")
+        if (unsolvedField.Length == 2)
             return SolveCell(unsolvedField) + SolveCell(unsolvedField);
         
         return SolveCell(unsolvedField);
