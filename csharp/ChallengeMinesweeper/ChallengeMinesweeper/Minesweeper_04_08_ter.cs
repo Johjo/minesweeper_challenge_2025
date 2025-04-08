@@ -28,16 +28,15 @@ public class TestMineSweeper0408Ter
     private string Minesweeper(string unsolvedField)
     {
         var solvedField = "";
-        
 
+        if (unsolvedField.Length == 1)
+            solvedField = SolveCell(unsolvedField);
+        
         if (unsolvedField.Length == 2)
         {
              solvedField = SolveCell(unsolvedField) + SolveCell(unsolvedField);
         }
 
-        if (unsolvedField.Length == 1)
-            solvedField = SolveCell(unsolvedField);
-        
         return solvedField;
         
     }
