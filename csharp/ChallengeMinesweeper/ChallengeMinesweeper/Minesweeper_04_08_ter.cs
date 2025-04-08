@@ -37,6 +37,11 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "..")
             return "00";
         
+        return SolveCell(unsolvedField);
+    }
+
+    private static string SolveCell(string unsolvedField)
+    {
         if (unsolvedField == ".")
             return "0";
         return "*";
