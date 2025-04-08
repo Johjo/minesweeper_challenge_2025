@@ -1,9 +1,11 @@
 namespace ChallengeMinesweeper;
+/* Erreur :
+     Expected string length 0 but was 9. Strings differ at index 0.
+  Expected: <string.Empty>
+  But was:  "fdsfdsfds"
+ */
 
-// Erreur : Le nom 'Minesweeper' n'existe 
-// pas dans le contexte actuel [C:\Projets\dojo-ytreza-dev\minesweeper_challenge_2025\csharp\ChallengeMinesweeper\ChallengeMinesweeper\ChallengeMinesweeper.csproj]
-
-// Action : je dois créer la méthode Minesweeper
+// Action : Je dois renvoyer une chaîne vide
 
 
 public class TestMineSweeper0408Ter
@@ -16,10 +18,11 @@ public class TestMineSweeper0408Ter
     [TestCase("", "")]
     public void Test1(string unsolvedField, string solvedField)
     {
-        Minesweeper(unsolvedField);
+        Assert.That(Minesweeper(unsolvedField), Is.EqualTo(solvedField));
     }
 
-    private void Minesweeper(string unsolvedField)
+    private string Minesweeper(string unsolvedField)
     {
+        return "";
     }
 }
