@@ -1,11 +1,10 @@
 namespace ChallengeMinesweeper;
 /* Observation :
-je vois à nouveau la possibilité de traiter une seule mine.
+Je vois que je peux utiliser le concept solveCell dans la gestion de deux cellules vides
 
  */
 
 /* Action
- je vais extraire une méthode pour traiter une seule cellule
 */
 
 
@@ -35,7 +34,7 @@ public class TestMineSweeper0408Ter
             return "**";
 
         if (unsolvedField == "..")
-            return "00";
+            return SolveCell(unsolvedField) + SolveCell(unsolvedField);
         
         return SolveCell(unsolvedField);
     }
