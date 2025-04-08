@@ -1,13 +1,14 @@
 namespace ChallengeMinesweeper;
 /* Erreur :
-     Expected string length 1 but was 0. Strings differ at index 0.
-  Expected: "0"
-  But was:  <string.Empty>
+     String lengths are both 1. Strings differ at index 0.
+  Expected: "*"
+  But was:  "0"
+
  */
 
 /*
- Action : Je renvoyais un champ de mine vide.
- Maintenant, il doit contenir une case vide
+ Action : Je découvre que je peux avoir une mine dans une case.
+ Je vais gérer cette mine
 */
 
 
@@ -20,6 +21,7 @@ public class TestMineSweeper0408Ter
 
     [TestCase("", "")]
     [TestCase(".", "0")]
+    [TestCase("*", "*")]
     public void Test1(string unsolvedField, string solvedField)
     {
         Assert.That(Minesweeper(unsolvedField), Is.EqualTo(solvedField));
@@ -30,6 +32,9 @@ public class TestMineSweeper0408Ter
         if (unsolvedField == "") 
             return "";
 
-        return "0";
+        if (unsolvedField == ".")
+            return "0";
+
+        return "*";
     }
 }
