@@ -28,12 +28,11 @@ public class TestMineSweeper0408Ter
     {
         var solvedField = "";
 
-        if (unsolvedField.Length == 1)
+        if (unsolvedField.Length >= 1)
             solvedField += SolveCell(unsolvedField);
 
         if (unsolvedField.Length == 2)
         {
-            solvedField += SolveCell(unsolvedField);
             solvedField += SolveCell(unsolvedField);
         }
 
