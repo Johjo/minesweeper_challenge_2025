@@ -36,15 +36,20 @@ def solve_cell(field, x):
     if field[x] == ".":
         count = 0
 
-        if len(field) > x + 1 and field[x + 1] == "*":
-            count += 1
-
-        if x - 1 >= 0 and field[x - 1] == "*":
-            count += 1
+        count = count_mine(field, x)
 
         return f"{count}"
     else:
         return "*"
+
+
+def count_mine(field, x):
+    count = 0
+    if len(field) > x + 1 and field[x + 1] == "*":
+        count += 1
+    if x - 1 >= 0 and field[x - 1] == "*":
+        count += 1
+    return count
 
 
 def test_minesweeper():
