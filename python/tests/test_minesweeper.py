@@ -25,6 +25,8 @@ def minesweeper(field):
     if field == ".\n.":
         return "\n".join(["0", "0"])
 
+    lines =  field.split("\n")
+
     return solve_line(field)
 
 
