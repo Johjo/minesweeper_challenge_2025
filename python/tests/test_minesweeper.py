@@ -40,8 +40,8 @@ def minesweeper(field):
     while len(field) > x:
         if field[0] == ".":
             solved_field += "0"
-
-        solved_field += "*"
+        if True:
+            solved_field += "*"
         x += 1
 
     return solved_field
