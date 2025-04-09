@@ -47,9 +47,9 @@ def solve_cell(field, x):
 def is_mine(field, x):
     if len(field) <= x:
         return False
-    if x >= 0:
-        return field[x] == "*"
-    return False
+    if x < 0:
+        return False
+    return field[x] == "*"
 
 
 def count_mine(field, x):
