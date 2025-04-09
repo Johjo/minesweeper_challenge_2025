@@ -62,8 +62,8 @@ def test_minesweeper_06():
 def test_minesweeper_07():
     assert minesweeper("..") == "00"
 
-# def test_minesweeper_08():
-#     assert minesweeper(".*") == "1*"
+def test_minesweeper_08():
+    assert minesweeper(".*") == "1*"
 
 
 
