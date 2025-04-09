@@ -52,9 +52,8 @@ def is_mine(field, x):
 def count_mine(field, x):
     count = 0
 
-    if len(field) > x + 1:
-        if is_mine(field, x+1) :
-            count += 1
+    if is_mine(field, x+1) :
+        count += 1
     if x - 1 >= 0:
         if field[x - 1] == "*":
             count += 1
