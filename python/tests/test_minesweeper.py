@@ -50,7 +50,7 @@ def is_mine(field, x, lines):
     if not is_in_field(lines, x):
         return False
 
-    return field[x] == "*"
+    return lines[0][x] == "*"
 
 
 def is_in_field(lines, x):
