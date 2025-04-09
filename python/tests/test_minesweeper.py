@@ -22,10 +22,10 @@
 
 
 def minesweeper(field):
-    pass
+    return ""
 
 
 def test_minesweeper():
-    minesweeper("")
+    assert minesweeper("") == ""
 
 
