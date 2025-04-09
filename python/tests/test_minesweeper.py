@@ -33,13 +33,13 @@ def minesweeper(field):
 def solve_line(field, lines):
     solved_line = ""
     x = 0
-    while len(field) > x:
-        solved_line += solve_cell(field, x, lines)
+    while len(lines[0]) > x:
+        solved_line += solve_cell(lines, x)
         x += 1
     return solved_line
 
 
-def solve_cell(field, x, lines):
+def solve_cell(lines, x):
     if is_mine(lines, x):
         return "*"
     return f"{count_mine(lines, x)}"
