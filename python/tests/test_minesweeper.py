@@ -22,17 +22,17 @@
 
 
 def minesweeper(field):
-    solvedField = ""
+    solved_field = ""
     if field == "..":
-        solvedField += "0"
-        solvedField += "0"
-        return solvedField
+        solved_field += "0"
+        solved_field += "0"
+        return solved_field
     if field == ".":
-        solvedField += "0"
-        return solvedField
+        solved_field += "0"
+        return solved_field
     if field == "*":
-        solvedField += "*"
-        return solvedField
+        solved_field += "*"
+        return solved_field
     return ""
 
 
