@@ -41,10 +41,14 @@ def solve_cell(field, x):
 
 def count_mine(field, x):
     count = 0
-    if len(field) > x + 1 and field[x + 1] == "*":
-        count += 1
-    if x - 1 >= 0 and field[x - 1] == "*":
-        count += 1
+
+
+    if len(field) > x + 1:
+        if field[x + 1] == "*":
+            count += 1
+    if x - 1 >= 0:
+        if field[x - 1] == "*":
+            count += 1
     return count
 
 
