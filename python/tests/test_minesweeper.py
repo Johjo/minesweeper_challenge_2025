@@ -54,7 +54,7 @@ def is_mine(field, x, lines):
 
 
 def is_in_field(field, x, lines):
-    if len(field) <= x:
+    if len(lines[0]) <= x:
         return False
     if x < 0:
         return False
