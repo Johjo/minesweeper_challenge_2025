@@ -40,7 +40,7 @@ def solve_cell(field, x):
                 pass
             else:
                 count = 1
-                return f"{count}"
+
         return f"{count}"
     else:
         return "*"
