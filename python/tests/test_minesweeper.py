@@ -23,7 +23,7 @@
 
 def minesweeper(field):
     if field == "..":
-        return "00"
+        return "0" + "0"
     if field == ".":
         return "0"
     if field == "*":
