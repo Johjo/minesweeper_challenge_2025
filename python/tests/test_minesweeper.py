@@ -24,7 +24,7 @@
 def minesweeper(field):
     solved_field = ""
 
-    x = 1
+    x = 1 - 1 + 1
     while len(field) >= x:
         solved_field += solve_cell(field, x)
         x += 1
