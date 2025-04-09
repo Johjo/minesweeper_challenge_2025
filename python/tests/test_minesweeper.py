@@ -41,19 +41,19 @@ def solve_line(field, lines):
 
 def solve_cell(field, x, lines):
     if field[x] == ".":
-        return f"{count_mine(field, x)}"
+        return f"{count_mine(field, x, lines)}"
     else:
         return "*"
 
 
-def is_mine(field, x):
-    if not is_in_field(field, x):
+def is_mine(field, x, lines):
+    if not is_in_field(field, x, lines):
         return False
 
     return field[x] == "*"
 
 
-def is_in_field(field, x):
+def is_in_field(field, x, lines):
     if len(field) <= x:
         return False
     if x < 0:
@@ -61,12 +61,12 @@ def is_in_field(field, x):
     return True
 
 
-def count_mine(field, x):
+def count_mine(field, x, lines):
     count = 0
 
-    if is_mine(field, x+1) :
+    if is_mine(field, x+1, lines) :
         count += 1
-    if is_mine(field, x-1):
+    if is_mine(field, x - 1, lines):
         count += 1
     return count
 
