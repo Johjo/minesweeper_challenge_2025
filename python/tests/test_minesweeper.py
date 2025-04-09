@@ -38,8 +38,6 @@ def solve_cell(field, x):
         if field == ".*":
             if x != len(field):
                 count = 1
-            else:
-                pass
 
         return f"{count}"
     else:
