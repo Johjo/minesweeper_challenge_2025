@@ -47,7 +47,7 @@ def count_mine(field, x):
     else:
         if field[x + 1] == "*":
             count += 1
-    if not x - 1 >= 0:
+    if not x >= 1:
         pass
     else:
         if field[x - 1] == "*":
