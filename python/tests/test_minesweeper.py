@@ -24,6 +24,8 @@
 def minesweeper(field):
     if field == ".":
         return "0"
+    if field == "*":
+        return "*"
     return ""
 
 
@@ -34,5 +36,9 @@ def test_minesweeper():
 
 def test_minesweeper_01():
     assert minesweeper(".") == "0"
+
+def test_minesweeper_02():
+    assert minesweeper("*") == "*"
+
 
 
