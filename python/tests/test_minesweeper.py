@@ -34,7 +34,7 @@ def minesweeper(field):
 
 def solve_cell(field, x):
     if field[x] == ".":
-        if len(field) >= x:
+        if len(field) > x:
             if field == ".*":
                 return "1"
         return "0"
