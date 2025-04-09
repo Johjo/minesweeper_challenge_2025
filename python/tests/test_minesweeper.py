@@ -34,7 +34,8 @@ def minesweeper(field):
         if True:
             solved_field += "*"
     if field == "*":
-        solved_field += "*"
+        if True:
+            solved_field += "*"
         if False:
             solved_field += "*"
 
