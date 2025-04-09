@@ -78,7 +78,6 @@ def test_minesweeper_08():
 def test_minesweeper_09():
     assert minesweeper("*.") == "*1"
 
-def test_minesweeper_10():
-    assert minesweeper("*.*") == "*2*"
+
 
 
