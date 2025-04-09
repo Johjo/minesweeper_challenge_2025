@@ -46,7 +46,7 @@ def solve_cell(field, x, lines):
         return "*"
 
 
-def is_mine(field, x, lines):
+def is_mine(lines, x):
     if not is_in_field(lines, x):
         return False
 
@@ -64,9 +64,9 @@ def is_in_field(lines, x):
 def count_mine(field, x, lines):
     count = 0
 
-    if is_mine(field, x+1, lines) :
+    if is_mine(lines, x + 1):
         count += 1
-    if is_mine(field, x - 1, lines):
+    if is_mine(lines, x - 1):
         count += 1
     return count
 
