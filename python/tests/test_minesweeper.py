@@ -37,6 +37,10 @@ def solve_cell(field, x):
         if len(field) > x + 1 and field[x + 1] == "*":
             return "1"
 
+        if x - 1 >= 0 and field[x - 1] == "*":
+            return "1"
+
+
         return "0"
     else:
         return "*"
@@ -65,5 +69,8 @@ def test_minesweeper_07():
 
 def test_minesweeper_08():
     assert minesweeper(".*") == "1*"
+
+def test_minesweeper_09():
+    assert minesweeper("*.") == "*1"
 
 
