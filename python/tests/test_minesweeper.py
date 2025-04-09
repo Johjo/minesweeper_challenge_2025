@@ -34,11 +34,15 @@ def minesweeper(field):
 
 def solve_cell(field, x):
     if field[x] == ".":
+        if len(field) > x + 1 and field[x + 1] == "*" and x - 1 >= 0 and field[x - 1] == "*":
+            return "2"
         if len(field) > x + 1 and field[x + 1] == "*":
             return "1"
 
         if x - 1 >= 0 and field[x - 1] == "*":
             return "1"
+
+
         return "0"
     else:
         return "*"
@@ -72,6 +76,6 @@ def test_minesweeper_09():
     assert minesweeper("*.") == "*1"
 
 def test_minesweeper_10():
-    assert minesweeper(".*.") == "1*1"
+    assert minesweeper("*.*") == "*2*"
 
 
