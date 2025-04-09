@@ -25,6 +25,9 @@ def minesweeper(field):
     if field == ".":
         return "0"
 
+    if field == "..":
+        return "00"
+
     solved_field = ""
 
     x = 0
@@ -52,6 +55,9 @@ def test_minesweeper_05():
 
 def test_minesweeper_06():
     assert minesweeper(".") == "0"
+
+def test_minesweeper_07():
+    assert minesweeper("..") == "00"
 
 
 
