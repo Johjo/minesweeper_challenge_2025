@@ -33,7 +33,7 @@ def minesweeper(field):
     if field == "*":
         solved_field += "*"
         return solved_field
-    return ""
+    return solved_field
 
 
 
