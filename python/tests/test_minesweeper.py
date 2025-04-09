@@ -28,14 +28,12 @@ def minesweeper(field):
 
     x = 0
     while len(field) > x:
-        solved_cell = ""
         if field[0] == ".":
 
             solved_cell = "0"
-            solved_field += solved_cell
         else:
             solved_cell = "*"
-            solved_field += solved_cell
+        solved_field += solved_cell
         x += 1
 
     return solved_field
