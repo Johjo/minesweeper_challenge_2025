@@ -37,7 +37,6 @@ def solve_cell(field, x):
         count = 0
         if field == ".*":
             if x == len(field):
-                count = 0
                 return f"{count}"
             else:
                 count = 1
