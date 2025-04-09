@@ -28,8 +28,7 @@ def minesweeper(field):
 
     x = 0
     while len(field) > x:
-        solved_cell = solve_cell(field)
-        solved_field += solved_cell
+        solved_field += solve_cell(field)
         x += 1
 
     return solved_field
