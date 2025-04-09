@@ -22,10 +22,17 @@
 
 
 def minesweeper(field):
+    if field == ".":
+        return "0"
     return ""
+
+
 
 
 def test_minesweeper():
     assert minesweeper("") == ""
+
+def test_minesweeper_01():
+    assert minesweeper(".") == "0"
 
 
