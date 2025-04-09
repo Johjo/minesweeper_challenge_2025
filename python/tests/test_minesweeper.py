@@ -29,9 +29,11 @@ def minesweeper(field):
     if len(field) >= 1:
         solved_field += "*"
 
-    if len(field) == 2:
+    if len(field) >= 2:
         solved_field += "*"
 
+    if len(field) == 3:
+        solved_field += "*"
 
 
     return solved_field
@@ -49,6 +51,10 @@ def test_minesweeper_02():
 
 def test_minesweeper_04():
     assert minesweeper("**") == "**"
+
+
+def test_minesweeper_05():
+    assert minesweeper("***") == "***"
 
 
 
