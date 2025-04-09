@@ -22,14 +22,16 @@
 
 
 def minesweeper(field):
-        solved_field = ""
+    if field == ".":
+        return "0"
+    solved_field = ""
 
-        x = 0
-        while len(field) > x:
-            solved_field += "*"
-            x += 1
+    x = 0
+    while len(field) > x:
+        solved_field += "*"
+        x += 1
 
-        return solved_field
+    return solved_field
 
 
 def test_minesweeper():
@@ -47,6 +49,8 @@ def test_minesweeper_04():
 def test_minesweeper_05():
     assert minesweeper("***") == "***"
 
+def test_minesweeper_06():
+    assert minesweeper(".") == "0"
 
 
 
