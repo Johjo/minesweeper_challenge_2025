@@ -22,8 +22,6 @@
 
 
 def minesweeper(field):
-
-
     solved_field = ""
 
     x = 0
