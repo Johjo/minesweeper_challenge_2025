@@ -46,7 +46,6 @@ def solve_cell(field, x):
 
         if x - 1 >= 0 and field[x - 1] == "*":
             count += 1
-            return f"{count}"
 
         return f"{count}"
     else:
