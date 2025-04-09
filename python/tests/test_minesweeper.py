@@ -36,7 +36,7 @@ def solve_cell(field, x):
     if field[x] == ".":
         if field == ".*":
             if x == len(field):
-                return 0
+                return "0"
             return "1"
         return "0"
     else:
