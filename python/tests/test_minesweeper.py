@@ -45,18 +45,13 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
-    cell_in_field = True
-    cell_in_field = is_in_field(cell_in_field, field, x)
-
-    if not cell_in_field:
+    if not is_in_field(field, x):
         return False
-
-
 
     return field[x] == "*"
 
 
-def is_in_field(cell_in_field, field, x):
+def is_in_field(field, x):
     if len(field) <= x:
         return False
     if x < 0:
