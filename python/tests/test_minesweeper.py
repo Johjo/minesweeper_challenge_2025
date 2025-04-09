@@ -24,18 +24,10 @@
 def minesweeper(field):
     solved_field = ""
 
-    if field == "":
-        if len(field) >= 1:
-            solved_field += "*"
 
 
-    if field == "*":
-        if len(field) >= 1:
-            solved_field += "*"
-
-    if field == "**":
-        if len(field) >= 1:
-            solved_field += "*"
+    if len(field) >= 1:
+        solved_field += "*"
 
     if len(field) == 2:
         solved_field += "*"
