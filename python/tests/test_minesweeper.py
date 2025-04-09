@@ -57,9 +57,8 @@ def count_mine(field, x):
 
     if is_mine(field, x+1) :
         count += 1
-    if x - 1 >= 0:
-        if is_mine(field, x-1):
-            count += 1
+    if is_mine(field, x-1):
+        count += 1
     return count
 
 
