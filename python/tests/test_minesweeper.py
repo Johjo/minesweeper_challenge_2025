@@ -25,12 +25,10 @@ def minesweeper(field):
     if field == ".\n.":
         return "\n".join(["0", "0"])
 
-    lines =  field.split("\n")
-
-    return solve_line(field, lines)
+    return solve_line(field.split("\n"))
 
 
-def solve_line(field, lines):
+def solve_line(lines):
     solved_line = ""
     x = 0
     while len(lines[0]) > x:
