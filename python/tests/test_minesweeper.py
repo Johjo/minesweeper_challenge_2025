@@ -35,6 +35,7 @@ def minesweeper(field):
 
     if len(field) > x:
         solved_field += "*"
+        x += 1
 
 
     return solved_field
