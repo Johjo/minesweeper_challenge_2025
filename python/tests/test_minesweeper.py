@@ -40,10 +40,9 @@ def solve_line(field, lines):
 
 
 def solve_cell(field, x, lines):
-    if not is_mine(lines, x):
-        return f"{count_mine(lines, x)}"
-    else:
+    if is_mine(lines, x):
         return "*"
+    return f"{count_mine(lines, x)}"
 
 
 def is_mine(lines, x):
