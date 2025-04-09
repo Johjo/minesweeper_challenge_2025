@@ -47,13 +47,13 @@ def solve_cell(field, x, lines):
 
 
 def is_mine(field, x, lines):
-    if not is_in_field(field, x, lines):
+    if not is_in_field(lines, x):
         return False
 
     return field[x] == "*"
 
 
-def is_in_field(field, x, lines):
+def is_in_field(lines, x):
     if len(lines[0]) <= x:
         return False
     if x < 0:
