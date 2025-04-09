@@ -23,7 +23,7 @@
 
 def minesweeper(field):
     if field == ".\n.":
-        return "0\n0"
+        return "\n".join(["0", "0"])
 
     return solve_line(field)
 
