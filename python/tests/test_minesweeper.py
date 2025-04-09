@@ -34,11 +34,7 @@ def minesweeper(field):
 
 def solve_cell(field, x):
     if field[x] == ".":
-        count = 0
-
-        count = count_mine(field, x)
-
-        return f"{count}"
+        return f"{count_mine(field, x)}"
     else:
         return "*"
 
