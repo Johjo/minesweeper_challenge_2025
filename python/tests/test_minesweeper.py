@@ -36,10 +36,10 @@ def solve_cell(field, x):
     if field[x] == ".":
         count = 0
         if field == ".*":
-            if x == len(field):
-                pass
-            else:
+            if x != len(field):
                 count = 1
+            else:
+                pass
 
         return f"{count}"
     else:
