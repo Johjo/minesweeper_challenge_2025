@@ -45,7 +45,7 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
-    return True
+    return field[x] == "*"
 
 
 def count_mine(field, x):
