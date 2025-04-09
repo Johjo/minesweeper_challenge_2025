@@ -29,7 +29,7 @@ def minesweeper(field):
         while len(field) > x:
             if field[0] == ".":
                 solved_field += "0"
-            if False:
+            if field[0] == "*":
                 solved_field += "*"
 
             x += 1
@@ -43,7 +43,7 @@ def minesweeper(field):
     while len(field) > x:
         if field[0] == ".":
             solved_field += "0"
-        if True:
+        if field[0] == "*":
             solved_field += "*"
         x += 1
 
