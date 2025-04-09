@@ -24,14 +24,17 @@
 def minesweeper(field):
     if field == ".\n.":
         return "0\n0"
-    solved_field = ""
 
+    return solve_line(field)
+
+
+def solve_line(field):
+    solved_line = ""
     x = 0
-    while len(field) > x :
-        solved_field += solve_cell(field, x)
+    while len(field) > x:
+        solved_line += solve_cell(field, x)
         x += 1
-
-    return solved_field
+    return solved_line
 
 
 def solve_cell(field, x):
