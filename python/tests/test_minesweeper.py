@@ -36,10 +36,9 @@ def solve_cell(field, x):
     if field[x] == ".":
         if field == ".*":
             return "1"
-        solved_cell = "0"
+        return "0"
     else:
-        solved_cell = "*"
-    return solved_cell
+        return "*"
 
 
 def test_minesweeper():
