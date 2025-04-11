@@ -21,7 +21,10 @@ def solve_cell(field, x):
         cell = "*"
     else:
         if is_mine(field, x + 1) and is_mine(field, x - 1):
-            cell = "2"
+            mine_around = 0
+            mine_around += 1
+            mine_around += 1
+            cell = f"{mine_around}"
         elif is_mine(field, x + 1):
             cell = "1"
         elif is_mine(field, x - 1):
