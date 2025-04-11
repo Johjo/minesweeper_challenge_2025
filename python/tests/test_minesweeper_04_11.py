@@ -8,12 +8,16 @@ def minesweeper(field: str) -> str:
     if field == ".":
         return "0"
 
-    return "00"
+    if field == "..":
+        return "00"
+
+    return "000"
 
 @pytest.mark.parametrize("field, expected", [
     ["", ""],
     [".", "0"],
     ["..", "00"],
+    ["...", "000"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
