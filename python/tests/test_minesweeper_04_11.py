@@ -30,9 +30,7 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
-    cell_is_outside = is_cell_outside(field, x)
-
-    if cell_is_outside:
+    if is_cell_outside(field, x):
         return False
 
     return field[x] == "*"
