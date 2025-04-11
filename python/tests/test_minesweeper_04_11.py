@@ -5,16 +5,13 @@ def minesweeper(field: str) -> str:
     solved_field = ""
 
     if len(field) > 0:
-        cell = solve_cell(field)
-        solved_field += cell
+        solved_field += solve_cell(field)
 
     if len(field) > 1:
-        cell = solve_cell(field)
-        solved_field += cell
+        solved_field += solve_cell(field)
 
     if len(field) > 2:
-        cell = solve_cell(field)
-        solved_field += cell
+        solved_field += solve_cell(field)
 
     return solved_field
 
