@@ -11,7 +11,7 @@ def minesweeper(field: str) -> str:
         solved_field += solve_cell(field, 1)
 
     if len(field) > 2:
-        solved_field += solve_cell(field, 0)
+        solved_field += solve_cell(field, 2)
 
     return solved_field
 
@@ -36,6 +36,7 @@ def solve_cell(field, x):
     ["**", "**"],
     ["***", "***"],
     [".*", "1*"],
+    ["..*", "01*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
