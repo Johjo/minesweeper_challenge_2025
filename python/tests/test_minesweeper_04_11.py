@@ -10,6 +10,9 @@ def minesweeper(field: str) -> str:
     if len(field) > 1:
         solved_field += "0"
 
+    if len(field) > 2:
+        solved_field += "0"
+
 
     if field == "":
         return solved_field
@@ -20,8 +23,6 @@ def minesweeper(field: str) -> str:
     if field == "..":
         return solved_field
 
-    if len(field) > 2:
-        solved_field += "0"
     return solved_field
 
 @pytest.mark.parametrize("field, expected", [
