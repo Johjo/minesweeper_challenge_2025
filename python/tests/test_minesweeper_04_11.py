@@ -30,17 +30,21 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
-    cell_is_outside = False
-    if not len(field) > x:
-        cell_is_outside = True
-
-    if not x  >= 0:
-        cell_is_outside = True
+    cell_is_outside = is_cell_outside(field, x)
 
     if cell_is_outside:
         return False
 
     return field[x] == "*"
+
+
+def is_cell_outside(field, x):
+    cell_is_outside = False
+    if not len(field) > x:
+        cell_is_outside = True
+    if not x >= 0:
+        cell_is_outside = True
+    return cell_is_outside
 
 
 @pytest.mark.parametrize("field, expected", [
