@@ -7,10 +7,9 @@ def minesweeper(field: str) -> str:
     if len(field) > 0:
         if field[0] == "*":
             cell = "*"
-            solved_field += cell
         else:
             cell = "0"
-            solved_field += cell
+        solved_field += cell
 
     if len(field) > 1:
         if field[0] == "*":
