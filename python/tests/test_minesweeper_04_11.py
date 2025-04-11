@@ -17,16 +17,20 @@ def minesweeper(field: str) -> str:
 
 
 def solve_cell(field, x):
-    if field[x] == "*":
+    if is_mine(field, x):
         cell = "*"
     else:
-        if len(field) > x + 1 and field[x + 1] == "*":
+        if len(field) > x + 1 and is_mine(field, x + 1):
             cell = "1"
-        elif x - 1 >= 0 and field[x - 1] == "*":
+        elif x - 1 >= 0 and is_mine(field, x - 1):
             cell = "1"
         else:
             cell = "0"
     return cell
+
+
+def is_mine(field, x):
+    return field[x] == "*"
 
 
 @pytest.mark.parametrize("field, expected", [
