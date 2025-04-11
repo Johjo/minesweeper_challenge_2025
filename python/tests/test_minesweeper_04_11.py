@@ -13,15 +13,17 @@ def minesweeper(field: str) -> str:
 
     if len(field) > 1:
         if field[0] == "*":
-            solved_field += "*"
+            cell = "*"
         else:
-            solved_field += "0"
+            cell = "0"
+        solved_field += cell
 
     if len(field) > 2:
         if field[0] == "*":
-            solved_field += "*"
+            cell = "*"
         else:
-            solved_field += "0"
+            cell = "0"
+        solved_field += cell
 
     return solved_field
 
