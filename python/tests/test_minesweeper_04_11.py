@@ -20,9 +20,7 @@ def solve_cell(field, x):
     if is_mine(field, x):
         cell = "*"
     else:
-        mine_around = count_mine_around(field, x)
-
-        cell = f"{mine_around}"
+        cell = f"{count_mine_around(field, x)}"
     return cell
 
 
