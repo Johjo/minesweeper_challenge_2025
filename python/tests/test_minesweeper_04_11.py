@@ -24,7 +24,6 @@ def minesweeper(field: str) -> str:
     ["..", "00"],
     ["...", "000"],
     ["*", "*"],
-
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
