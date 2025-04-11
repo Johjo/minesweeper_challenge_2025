@@ -19,8 +19,7 @@ def minesweeper(field: str) -> str:
 def solve_cell(field, x):
     if is_mine(field, x):
         return "*"
-    else:
-        return f"{count_mine_around(field, x)}"
+    return f"{count_mine_around(field, x)}"
 
 
 def count_mine_around(field, x):
