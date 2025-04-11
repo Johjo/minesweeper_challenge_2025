@@ -20,7 +20,9 @@ def solve_cell(field, x):
     if is_mine(field, x):
         cell = "*"
     else:
-        if is_mine(field, x + 1):
+        if is_mine(field, x + 1) and is_mine(field, x - 1):
+            cell = "2"
+        elif is_mine(field, x + 1):
             cell = "1"
         elif is_mine(field, x - 1):
             cell = "1"
@@ -56,6 +58,7 @@ def is_cell_outside(field, x):
     [".*", "1*"],
     ["..*", "01*"],
     ["*.", "*1"],
+    ["*.*", "*2*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
