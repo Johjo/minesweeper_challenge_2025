@@ -3,15 +3,19 @@ import pytest
 
 def minesweeper(field: str) -> str:
     if field == "":
-        return ""
+        solved_field = ""
+        return solved_field
 
     if field == ".":
-        return "0"
+        solved_field = "0"
+        return solved_field
 
     if field == "..":
-        return "00"
+        solved_field = "00"
+        return solved_field
 
-    return "000"
+    solved_field = "000"
+    return solved_field
 
 @pytest.mark.parametrize("field, expected", [
     ["", ""],
