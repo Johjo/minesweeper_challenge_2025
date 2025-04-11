@@ -33,10 +33,11 @@ def is_mine(field, x):
     cell_is_outside = False
     if not len(field) > x:
         cell_is_outside = True
-        return False
 
     if not x  >= 0:
         cell_is_outside = True
+
+    if cell_is_outside:
         return False
 
     return field[x] == "*"
