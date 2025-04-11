@@ -13,16 +13,6 @@ def minesweeper(field: str) -> str:
     if len(field) > 2:
         solved_field += "0"
 
-
-    if field == "":
-        return solved_field
-
-    if field == ".":
-        return solved_field
-
-    if field == "..":
-        return solved_field
-
     return solved_field
 
 @pytest.mark.parametrize("field, expected", [
