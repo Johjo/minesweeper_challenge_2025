@@ -30,6 +30,7 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
+    cell_is_outside = False
     if not len(field) > x:
         cell_is_outside = True
         return False
