@@ -22,12 +22,14 @@ def solve_cell(field, x):
     else:
         if is_mine(field, x + 1) and is_mine(field, x - 1):
             mine_around = 0
-            mine_around += 1
+            if is_mine(field, x + 1):
+                mine_around += 1
             mine_around += 1
             cell = f"{mine_around}"
         elif is_mine(field, x + 1):
             mine_around = 0
-            mine_around += 1
+            if is_mine(field, x + 1):
+                mine_around += 1
             cell = f"{mine_around}"
         elif is_mine(field, x - 1):
             mine_around = 0
