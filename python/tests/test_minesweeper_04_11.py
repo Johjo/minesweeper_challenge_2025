@@ -20,7 +20,7 @@ def solve_cell(field, x):
     if is_mine(field, x):
         cell = "*"
     else:
-        if len(field) > x + 1 and is_mine(field, x + 1):
+        if is_mine(field, x + 1):
             cell = "1"
         elif x - 1 >= 0 and is_mine(field, x - 1):
             cell = "1"
@@ -30,6 +30,8 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
+    if not len(field) > x:
+        return False
     return field[x] == "*"
 
 
