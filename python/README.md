@@ -1,0 +1,1 @@
+$env:GAMBLE_TEST_COMMAND='pytest'

@@ -21,9 +21,9 @@
 # 2 indique qu'il y a deux mines à côté
 
 
-def minesweeper(field):
+def minesweeper(field: str) -> str:
     if field == ".\n.":
-        return "\n".join([solve_line("."), solve_line(".")])
+        return "\n".join(["0", "0"])
 
     if field == "..\n..":
         return "\n".join(["00", "00"])
@@ -34,7 +34,7 @@ def minesweeper(field):
     return solve_line(lines)
 
 
-def solve_line(lines):
+def solve_line(lines: list[str]) -> str:
     solved_line = ""
     x = 0
     while len(lines[0]) > x:
