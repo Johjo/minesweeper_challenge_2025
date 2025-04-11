@@ -22,6 +22,8 @@ def solve_cell(field, x):
     else:
         if len(field) > x + 1 and field[x + 1] == "*":
             cell = "1"
+        elif x - 1 >= 0 and field[x - 1] == "*":
+            cell = "1"
         else:
             cell = "0"
     return cell
@@ -37,6 +39,7 @@ def solve_cell(field, x):
     ["***", "***"],
     [".*", "1*"],
     ["..*", "01*"],
+    ["*.", "*1"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
