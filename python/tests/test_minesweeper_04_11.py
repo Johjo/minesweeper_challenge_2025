@@ -5,27 +5,27 @@ def minesweeper(field: str) -> str:
     solved_field = ""
 
     if len(field) > 0:
-        if field[0] == "*":
-            cell = "*"
-        else:
-            cell = "0"
+        cell = solve_cell(field)
         solved_field += cell
 
     if len(field) > 1:
-        if field[0] == "*":
-            cell = "*"
-        else:
-            cell = "0"
+        cell = solve_cell(field)
         solved_field += cell
 
     if len(field) > 2:
-        if field[0] == "*":
-            cell = "*"
-        else:
-            cell = "0"
+        cell = solve_cell(field)
         solved_field += cell
 
     return solved_field
+
+
+def solve_cell(field):
+    if field[0] == "*":
+        cell = "*"
+    else:
+        cell = "0"
+    return cell
+
 
 @pytest.mark.parametrize("field, expected", [
     ["", ""],
