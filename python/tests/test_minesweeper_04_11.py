@@ -13,10 +13,13 @@ def minesweeper(field: str) -> str:
 
     if field == "..":
         solved_field = ""
-        solved_field += "00"
+        solved_field += "0"
+        solved_field += "0"
         return solved_field
     solved_field = ""
-    solved_field += "000"
+    solved_field += "0"
+    solved_field += "0"
+    solved_field += "0"
     return solved_field
 
 @pytest.mark.parametrize("field, expected", [
