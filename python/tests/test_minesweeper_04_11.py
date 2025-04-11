@@ -18,7 +18,8 @@ def minesweeper(field: str) -> str:
             solved_field += "0"
         return solved_field
 
-    solved_field += "0"
+    if len(field) > 1:
+        solved_field += "0"
     solved_field += "0"
     return solved_field
 
