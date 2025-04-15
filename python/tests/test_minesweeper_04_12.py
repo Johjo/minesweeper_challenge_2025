@@ -12,8 +12,9 @@ def minesweeper(field: str) -> str:
     if len(field) > x:
         solved_field += solve_cell(field, x)
 
-    if len(field) > 2:
-        solved_field += solve_cell(field, 2)
+    x = 2
+    if len(field) > x:
+        solved_field += solve_cell(field, x)
 
     return solved_field
 
