@@ -5,7 +5,7 @@ def minesweeper(field: str) -> str:
     solved_field = ""
 
     x = 0
-    if len(field) > x:
+    while len(field) > x:
         solved_field += solve_cell(field, x)
         x += 1
 
