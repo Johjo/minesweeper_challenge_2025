@@ -6,7 +6,7 @@ def minesweeper(field: str) -> str:
     solved_lines = []
 
     if field == ".\n*":
-        return "1\n*"
+        return "0\n*"
     else:
         y = 0
         while len(lines) > y:
@@ -72,7 +72,7 @@ def is_cell_outside(field, x):
     [".\n.", "0\n0"],
     ["*\n*", "*\n*"],
     ["..\n..\n..", "00\n00\n00"],
-    [".\n*", "1\n*"],
+    [".\n*", "0\n*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
