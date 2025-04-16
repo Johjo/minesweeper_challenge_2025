@@ -2,8 +2,9 @@ import pytest
 
 
 def minesweeper(field: str) -> str:
+    lines = field.split("\n")
     if field == ".\n.":
-        solved_lines = [solve_line("."), solve_line(".")]
+        solved_lines = [solve_line(lines[0]), solve_line(lines[1])]
     elif field == "*\n*":
         solved_lines = [solve_line("*"), solve_line("*")]
     elif field == "..\n..\n..":
