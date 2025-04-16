@@ -3,13 +3,17 @@ import pytest
 
 def minesweeper(field: str) -> str:
     if field == ".\n.":
-        return "\n".join([solve_line("."), solve_line(".")])
+        solved_lines = [solve_line("."), solve_line(".")]
+        return "\n".join(solved_lines)
     if field == "*\n*":
-        return "\n".join([solve_line("*"), solve_line("*")])
+        solved_lines = [solve_line("*"), solve_line("*")]
+        return "\n".join(solved_lines)
     if field == "..\n..\n..":
-        return "\n".join([solve_line(".."), solve_line(".."), solve_line("..")])
+        solved_lines = [solve_line(".."), solve_line(".."), solve_line("..")]
+        return "\n".join(solved_lines)
 
-    return "\n".join([solve_line(field)])
+    solved_lines = [solve_line(field)]
+    return "\n".join(solved_lines)
 
 
 def solve_line(field):
