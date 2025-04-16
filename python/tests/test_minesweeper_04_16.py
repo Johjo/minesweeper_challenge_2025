@@ -21,12 +21,12 @@ def solve_line(lines, y):
     x = 0
     solved_line = ""
     while len(lines[y]) > x:
-        solved_line += solve_cell(lines[y], x)
+        solved_line += solve_cell(lines[y], x, lines, y)
         x += 1
     return solved_line
 
 
-def solve_cell(field, x):
+def solve_cell(field, x, lines, y):
     if is_mine(field, x):
         return "*"
     return f"{count_mine_around(field, x)}"
