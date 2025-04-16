@@ -38,6 +38,9 @@ def count_mine_around(lines, x, y):
         mine_around += 1
     if is_mine(lines, x - 1, y):
         mine_around += 1
+    if is_mine(lines, x, y - 1):
+        mine_around += 1
+
     return mine_around
 
 
@@ -73,7 +76,7 @@ def is_cell_outside(field, x):
     [".\n.", "0\n0"],
     ["*\n*", "*\n*"],
     ["..\n..\n..", "00\n00\n00"],
-    [".\n*", "0\n*"] # cheat,
+    [".\n*", "1\n*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
