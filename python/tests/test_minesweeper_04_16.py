@@ -5,7 +5,7 @@ def minesweeper(field: str) -> str:
     lines = field.split("\n")
     solved_lines = []
     y = 0
-    if len(lines) > y:
+    while len(lines) > y:
         solved_lines.append(solve_line(lines[0]))
         y += 1
 
