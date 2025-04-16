@@ -6,7 +6,8 @@ def minesweeper(field: str) -> str:
     solved_lines = []
 
     if field == ".\n*":
-        return "0\n*"
+        solved_lines.append(solve_line(lines[0]))
+        solved_lines.append(solve_line(lines[1]))
     else:
         y = 0
         while len(lines) > y:
