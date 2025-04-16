@@ -4,15 +4,16 @@ import pytest
 def minesweeper(field: str) -> str:
     lines = field.split("\n")
     solved_lines = []
-    if len(lines) == 2:
+    if len(lines) > 0:
         solved_lines.append(solve_line(lines[0]))
+    if len(lines) == 2:
+
         solved_lines.append(solve_line(lines[0]))
     elif len(lines) == 3:
         solved_lines.append(solve_line(lines[0]))
         solved_lines.append(solve_line(lines[0]))
-        solved_lines.append(solve_line(lines[0]))
     else:
-        solved_lines.append(solve_line(lines[0]))
+        pass
     return "\n".join(solved_lines)
 
 
