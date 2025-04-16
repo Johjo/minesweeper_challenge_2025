@@ -11,7 +11,7 @@ def minesweeper(field: str) -> str:
     else:
         y = 0
         while len(lines) > y:
-            solved_lines.append(solve_line(lines, 0))
+            solved_lines.append(solve_line(lines, y))
             y += 1
 
     return "\n".join(solved_lines)
