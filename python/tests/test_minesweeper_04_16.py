@@ -29,10 +29,10 @@ def solve_line(lines, y):
 def solve_cell(lines, x, y):
     if is_mine(lines[y], x):
         return "*"
-    return f"{count_mine_around(lines[y], x)}"
+    return f"{count_mine_around(lines[y], x, lines, y)}"
 
 
-def count_mine_around(field, x):
+def count_mine_around(field, x, lines, y):
     mine_around = 0
     if is_mine(field, x + 1):
         mine_around += 1
