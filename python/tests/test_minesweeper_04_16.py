@@ -6,11 +6,15 @@ def minesweeper(field: str) -> str:
         return "0\n0"
     solved_field = ""
 
+    return solve_line(field)
+
+
+def solve_line(field):
     x = 0
+    solved_field = ""
     while len(field) > x:
         solved_field += solve_cell(field, x)
         x += 1
-
     return solved_field
 
 
