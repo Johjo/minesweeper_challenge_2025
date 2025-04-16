@@ -45,7 +45,7 @@ def is_mine(field, x, lines, y):
     if is_cell_outside(lines[y], x):
         return False
 
-    return field[x] == "*"
+    return lines[y][x] == "*"
 
 
 def is_cell_outside(field, x):
