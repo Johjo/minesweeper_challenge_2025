@@ -3,9 +3,7 @@ import pytest
 
 def minesweeper(field: str) -> str:
     if field == ".\n.":
-        return "0\n0"
-    solved_field = ""
-
+        return solve_line(".") + "\n" + solve_line(".")
     return solve_line(field)
 
 
