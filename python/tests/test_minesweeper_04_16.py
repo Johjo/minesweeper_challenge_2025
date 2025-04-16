@@ -8,9 +8,11 @@ def minesweeper(field: str) -> str:
         solved_lines.append(solve_line(lines[0]))
         solved_lines.append(solve_line(lines[0]))
     elif len(lines) == 3:
-        solved_lines = [solve_line(lines[0]), solve_line(lines[0]), solve_line(lines[0])]
+        solved_lines.append(solve_line(lines[0]))
+        solved_lines.append(solve_line(lines[0]))
+        solved_lines.append(solve_line(lines[0]))
     else:
-        solved_lines = [solve_line(lines[0])]
+        solved_lines.append(solve_line(lines[0]))
     return "\n".join(solved_lines)
 
 
