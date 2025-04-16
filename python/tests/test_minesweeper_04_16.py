@@ -5,15 +5,15 @@ def minesweeper(field: str) -> str:
     if field == ".\n.":
         solved_lines = [solve_line("."), solve_line(".")]
         return "\n".join(solved_lines)
-    if field == "*\n*":
+    elif field == "*\n*":
         solved_lines = [solve_line("*"), solve_line("*")]
         return "\n".join(solved_lines)
-    if field == "..\n..\n..":
+    elif field == "..\n..\n..":
         solved_lines = [solve_line(".."), solve_line(".."), solve_line("..")]
         return "\n".join(solved_lines)
-
-    solved_lines = [solve_line(field)]
-    return "\n".join(solved_lines)
+    else:
+        solved_lines = [solve_line(field)]
+        return "\n".join(solved_lines)
 
 
 def solve_line(field):
