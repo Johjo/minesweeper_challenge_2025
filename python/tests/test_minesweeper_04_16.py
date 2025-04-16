@@ -20,8 +20,8 @@ def minesweeper(field: str) -> str:
 def solve_line(field, lines, y):
     x = 0
     solved_line = ""
-    while len(field) > x:
-        solved_line += solve_cell(field, x)
+    while len(lines[y]) > x:
+        solved_line += solve_cell(lines[y], x)
         x += 1
     return solved_line
 
