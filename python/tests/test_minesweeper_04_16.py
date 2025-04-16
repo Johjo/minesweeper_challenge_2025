@@ -5,14 +5,10 @@ def minesweeper(field: str) -> str:
     lines = field.split("\n")
     solved_lines = []
 
-    if field == ".\n*":
-        solved_lines.append(solve_line(lines, 0))
-        solved_lines.append(solve_line(lines, 1)),
-    else:
-        y = 0
-        while len(lines) > y:
-            solved_lines.append(solve_line(lines, y))
-            y += 1
+    y = 0
+    while len(lines) > y:
+        solved_lines.append(solve_line(lines, y))
+        y += 1
 
     return "\n".join(solved_lines)
 
