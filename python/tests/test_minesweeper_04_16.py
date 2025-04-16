@@ -77,6 +77,7 @@ def is_cell_outside(field, x):
     ["*\n*", "*\n*"],
     ["..\n..\n..", "00\n00\n00"],
     [".\n*", "1\n*"],
+    # ["*\n.", "*\n1"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
