@@ -27,21 +27,21 @@ def solve_line(lines, y):
 
 
 def solve_cell(lines, x, y):
-    if is_mine(lines[y], x):
+    if is_mine(lines[y], x, lines, y):
         return "*"
     return f"{count_mine_around(lines, x, y)}"
 
 
 def count_mine_around(lines, x, y):
     mine_around = 0
-    if is_mine(lines[y], x + 1):
+    if is_mine(lines[y], x + 1, lines, y):
         mine_around += 1
-    if is_mine(lines[y], x - 1):
+    if is_mine(lines[y], x - 1, lines, y):
         mine_around += 1
     return mine_around
 
 
-def is_mine(field, x):
+def is_mine(field, x, lines, y):
     if is_cell_outside(field, x):
         return False
 
