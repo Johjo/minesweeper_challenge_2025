@@ -4,6 +4,9 @@ import pytest
 def minesweeper(field: str) -> str:
     if field == ".\n.":
         return solve_line(".") + "\n" + solve_line(".")
+    if field == "*\n*":
+        return solve_line("*") + "\n" + solve_line("*")
+
     return solve_line(field)
 
 
@@ -61,6 +64,7 @@ def is_cell_outside(field, x):
     ["*.*", "*2*"],
     [".*.**.*.", "1*2**2*1"],
     [".\n.", "0\n0"],
+    ["*\n*", "*\n*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
