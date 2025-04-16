@@ -5,8 +5,6 @@ def minesweeper(field: str) -> str:
     lines = field.split("\n")
     if len(lines) == 2:
         solved_lines = [solve_line(lines[0]), solve_line(lines[0])]
-    elif field == "*\n*":
-        solved_lines = [solve_line(lines[0]), solve_line(lines[0])]
     elif field == "..\n..\n..":
         solved_lines = [solve_line(lines[0]), solve_line(lines[0]), solve_line(lines[0])]
     else:
