@@ -34,9 +34,9 @@ def solve_cell(lines, x, y):
 
 def count_mine_around(field, x, lines, y):
     mine_around = 0
-    if is_mine(field, x + 1):
+    if is_mine(lines[y], x + 1):
         mine_around += 1
-    if is_mine(field, x - 1):
+    if is_mine(lines[y], x - 1):
         mine_around += 1
     return mine_around
 
