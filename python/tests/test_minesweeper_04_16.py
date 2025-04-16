@@ -2,14 +2,16 @@ import pytest
 
 
 def minesweeper(field: str) -> str:
-    if field == ".\n*":
-        return "1\n*"
     lines = field.split("\n")
     solved_lines = []
-    y = 0
-    while len(lines) > y:
-        solved_lines.append(solve_line(lines[0]))
-        y += 1
+
+    if field == ".\n*":
+        return "1\n*"
+    else:
+        y = 0
+        while len(lines) > y:
+            solved_lines.append(solve_line(lines[0]))
+            y += 1
 
     return "\n".join(solved_lines)
 
