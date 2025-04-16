@@ -42,7 +42,7 @@ def count_mine_around(lines, x, y):
 
 
 def is_mine(field, x, lines, y):
-    if is_cell_outside(field, x):
+    if is_cell_outside(lines[y], x):
         return False
 
     return field[x] == "*"
