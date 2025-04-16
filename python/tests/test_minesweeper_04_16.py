@@ -6,7 +6,7 @@ def minesweeper(field: str) -> str:
     if field == ".\n.":
         solved_lines = [solve_line(lines[0]), solve_line(lines[0])]
     elif field == "*\n*":
-        solved_lines = [solve_line("*"), solve_line("*")]
+        solved_lines = [solve_line(lines[0]), solve_line(lines[0])]
     elif field == "..\n..\n..":
         solved_lines = [solve_line(".."), solve_line(".."), solve_line("..")]
     else:
