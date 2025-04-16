@@ -7,7 +7,7 @@ def minesweeper(field: str) -> str:
     if field == "*\n*":
         return "\n".join([solve_line("*"), solve_line("*")])
     if field == "..\n..\n..":
-        return solve_line("..") + "\n" + solve_line("..") + "\n" + solve_line("..")
+        return "\n".join([solve_line(".."), solve_line(".."), solve_line("..")])
 
     return solve_line(field)
 
