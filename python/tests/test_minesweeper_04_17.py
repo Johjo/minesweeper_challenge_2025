@@ -17,11 +17,15 @@ def solve_cell(field, x):
         return "*"
     if is_mine(field, x + 1):
         if is_mine(field, x - 1):
-            return f"{2}"
-        return f"{1}"
+            mine_around = 2
+            return f"{mine_around}"
+        mine_around = 1
+        return f"{mine_around}"
     if is_mine(field, x - 1):
-        return f"{1}"
-    return f"{0}"
+        mine_around = 1
+        return f"{mine_around}"
+    mine_around = 0
+    return f"{mine_around}"
 
 
 def is_mine(field, x):
