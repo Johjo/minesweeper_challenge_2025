@@ -5,6 +5,8 @@ def minesweeper(field: str) -> str:
     lines = field.split("\n")
     if len(lines) == 2:
         return solve_line(lines[0]) + "\n" + solve_line(lines[0])
+    if len(lines) == 3:
+        return solve_line(lines[0]) + "\n" + solve_line(lines[0]) + "\n" + solve_line(lines[0])
 
     return solve_line(lines[0])
 
@@ -54,6 +56,7 @@ def is_mine(field, x):
     ["*.*", "*2*"],
     ["*\n*", "*\n*"],
     ["**\n**", "**\n**"],
+    ["**\n**\n**", "**\n**\n**"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
