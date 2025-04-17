@@ -6,9 +6,8 @@ def minesweeper(field: str) -> str:
     solved_lines = []
 
     y = 0
-    while len(lines) > y:
+    for y in range(len(lines)):
         solved_lines.append(solve_line(lines, y))
-        y += 1
 
     return "\n".join(solved_lines)
 
