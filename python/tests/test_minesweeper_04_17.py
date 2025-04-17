@@ -49,8 +49,6 @@ def is_mine(line, x, field, y):
     if x < 0:
         return False
 
-    if len(line) == x:
-        return False
     try:
         return lines[y][x] == "*"
     except:
