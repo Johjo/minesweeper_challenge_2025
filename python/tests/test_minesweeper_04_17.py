@@ -1,8 +1,13 @@
+import pytest
+
+
 def minesweeper(field: str) -> str:
     return ""
 
 
-def test_minesweeper():
+@pytest.mark.parametrize("field, expected", [
+    ["", ""]])
+def test_minesweeper(field, expected):
     assert minesweeper("") == ""
 
 
