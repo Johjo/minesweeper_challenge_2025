@@ -15,8 +15,9 @@ def minesweeper(field: str) -> str:
 def solve_cell(field, x):
     if is_mine(field, x):
         return "*"
+    mine_around = 0
     if is_mine(field, x + 1):
-        mine_around = 0
+
         if is_mine(field, x - 1):
             mine_around += 1
             mine_around += 1
@@ -24,10 +25,8 @@ def solve_cell(field, x):
         mine_around += 1
         return f"{mine_around}"
     if is_mine(field, x - 1):
-        mine_around = 0
         mine_around += 1
         return f"{mine_around}"
-    mine_around = 0
     return f"{mine_around}"
 
 
