@@ -10,7 +10,7 @@ def minesweeper(field: str) -> str:
         return "\n".join([solve_line(lines[0]), solve_line(lines[0]), solve_line(lines[0])])
 
 
-    return solve_line(lines[0])
+    return "\n".join([solve_line(lines[0])])
 
 
 def solve_line(line):
