@@ -11,7 +11,8 @@ def minesweeper(field: str) -> str:
     elif field == ".":
         pass
     else:
-        solved_field += "0"
+        if len(field) > 0:
+            solved_field += "0"
     return solved_field
 
 
