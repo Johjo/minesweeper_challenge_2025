@@ -21,7 +21,7 @@ def solve_cell(field, x):
 
 
 def is_mine(field, x):
-    if not len(field) > x:
+    if len(field) <= x:
         return False
     return field[x] == "*"
 
