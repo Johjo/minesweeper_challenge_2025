@@ -16,10 +16,6 @@ def solve_cell(field, x):
     if is_mine(field, x):
         return "*"
     mine_around = 0
-    if is_mine(field, x + 1) and is_mine(field, x - 1):
-        pass
-    else:
-        pass
     if is_mine(field, x + 1):
         mine_around += 1
     if is_mine(field, x - 1):
