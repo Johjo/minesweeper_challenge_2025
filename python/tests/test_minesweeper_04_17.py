@@ -15,12 +15,14 @@ def minesweeper(field: str) -> str:
 def solve_cell(field, x):
     if is_mine(field, x):
         return "*"
-    if len(field) > x + 1 and is_mine(field, x + 1):
+    if is_mine(field, x + 1):
         return "1"
     return "0"
 
 
 def is_mine(field, x):
+    if not len(field) > x:
+        return False
     return field[x] == "*"
 
 
