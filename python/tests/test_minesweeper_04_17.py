@@ -13,11 +13,7 @@ def minesweeper(field: str) -> str:
 
 
 def solve_cell(field):
-    if field == "*":
-        return "*"
-    if field == "**":
-        return "*"
-    if field == "***":
+    if field[0] == "*":
         return "*"
     return "0"
 
