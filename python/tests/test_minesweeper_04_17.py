@@ -36,14 +36,19 @@ def count_mine_around(line, x, field, y):
         mine_around += 1
     if is_mine(line, x, field, y + 1):
         mine_around += 1
+    if is_mine(line, x, field, y - 1):
+        mine_around += 1
     return mine_around
 
 
 def is_mine(line, x, field, y):
     lines = field.split("\n")
 
+    if y < 0:
+        return False
     if x < 0:
         return False
+
     if len(line) == x:
         return False
     try:
@@ -67,6 +72,7 @@ def is_mine(line, x, field, y):
     ["**\n**", "**\n**"],
     ["**\n**\n**", "**\n**\n**"],
     [".\n*", "1\n*"],
+    ["*\n.", "*\n1"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
