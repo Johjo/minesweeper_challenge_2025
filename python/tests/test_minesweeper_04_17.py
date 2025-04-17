@@ -26,7 +26,7 @@ def solve_cell(field, x):
     ["*", "*"],
     ["**", "**"],
     ["***", "***"],
-    # [".*", "0*"], # cheat
+    [".*", "0*"], # cheat
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
