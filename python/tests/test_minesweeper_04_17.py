@@ -15,11 +15,8 @@ def minesweeper(field: str) -> str:
 def solve_cell(field, x):
     if field[x] == "*":
         return "*"
-    try:
-        if field[x + 1] == "*":
-            return "1"
-    except:
-        pass
+    if len(field) > x + 1 and field[x + 1] == "*":
+        return "1"
     return "0"
 
 
