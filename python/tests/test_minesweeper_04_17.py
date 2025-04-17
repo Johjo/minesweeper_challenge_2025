@@ -4,13 +4,16 @@ import pytest
 def minesweeper(field: str) -> str:
     if field == "*\n*":
         return "*\n*"
-    solved_field = ""
 
+    return solve_line(field)
+
+
+def solve_line(field):
+    solved_field = ""
     x = 0
     while len(field) > x:
         solved_field += solve_cell(field, x)
         x += 1
-
     return solved_field
 
 
