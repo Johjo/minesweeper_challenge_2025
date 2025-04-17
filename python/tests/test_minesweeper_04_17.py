@@ -16,7 +16,8 @@ def minesweeper(field: str) -> str:
         solved_lines.append(solve_line(lines[0]))
         return "\n".join(solved_lines)
 
-    solved_lines = [solve_line(lines[0])]
+    solved_lines = []
+    solved_lines.append(solve_line(lines[0]))
     return "\n".join(solved_lines)
 
 
