@@ -8,11 +8,11 @@ def minesweeper(field: str) -> str:
     return solve_line(field)
 
 
-def solve_line(field):
+def solve_line(line):
     solved_field = ""
     x = 0
-    while len(field) > x:
-        solved_field += solve_cell(field, x)
+    while len(line) > x:
+        solved_field += solve_cell(line, x)
         x += 1
     return solved_field
 
