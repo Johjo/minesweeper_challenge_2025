@@ -27,7 +27,8 @@ def solve_cell(field, x):
     elif is_mine(field, x - 1):
         mine_around += 1
         return f"{mine_around}"
-    return f"{mine_around}"
+    else:
+        return f"{mine_around}"
 
 
 def is_mine(field, x):
