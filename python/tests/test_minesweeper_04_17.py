@@ -4,7 +4,8 @@ import pytest
 def minesweeper(field: str) -> str:
     solved_field = ""
     if field == "":
-        pass
+        if len(field) > 0:
+            solved_field += "0"
     elif field == ".":
         if len(field) > 0:
             solved_field += "0"
