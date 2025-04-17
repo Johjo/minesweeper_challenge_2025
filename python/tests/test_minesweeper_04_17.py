@@ -38,6 +38,7 @@ def is_mine(field, x):
     ["***", "***"],
     [".*", "1*"],
     ["*.", "*1"],
+    ["**.", "**1"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
