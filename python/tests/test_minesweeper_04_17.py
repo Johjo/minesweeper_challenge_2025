@@ -20,12 +20,11 @@ def solve_cell(field, x):
         mine_around += 1
         mine_around += 1
         return f"{mine_around}"
-
-    if is_mine(field, x + 1):
+    elif is_mine(field, x + 1):
 
         mine_around += 1
         return f"{mine_around}"
-    if is_mine(field, x - 1):
+    elif is_mine(field, x - 1):
         mine_around += 1
         return f"{mine_around}"
     return f"{mine_around}"
