@@ -22,10 +22,10 @@ def solve_line(line):
     return solved_field
 
 
-def solve_cell(field, x):
-    if is_mine(field, x):
+def solve_cell(line, x):
+    if is_mine(line, x):
         return "*"
-    return f"{count_mine_around(field, x)}"
+    return f"{count_mine_around(line, x)}"
 
 
 def count_mine_around(field, x):
@@ -59,6 +59,7 @@ def is_mine(field, x):
     ["*\n*", "*\n*"],
     ["**\n**", "**\n**"],
     ["**\n**\n**", "**\n**\n**"],
+    # [".\n*", "0\n*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
