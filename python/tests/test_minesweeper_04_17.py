@@ -57,7 +57,7 @@ def is_mine(lines, line, x, y):
 
     if len(lines) == y:
         return False
-    if len(lines[0]) == x:
+    if len(lines[y]) == x:
         return False
 
     return lines[y][x] == "*"
