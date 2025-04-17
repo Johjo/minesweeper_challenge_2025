@@ -6,14 +6,14 @@ def minesweeper(field: str) -> str:
 
     x = 0
     while len(field) > x:
-        solved_field += solve_cell(field)
+        solved_field += solve_cell(field, x)
         x += 1
 
     return solved_field
 
 
-def solve_cell(field):
-    if field[0] == "*":
+def solve_cell(field, x):
+    if field[x] == "*":
         return "*"
     return "0"
 
