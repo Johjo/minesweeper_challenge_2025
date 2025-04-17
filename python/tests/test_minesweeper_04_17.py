@@ -1,8 +1,8 @@
-def minesweeper(field: str):
-    pass
+def minesweeper(field: str) -> str:
+    return ""
 
 
 def test_minesweeper():
-    minesweeper("")
+    assert minesweeper("") == ""
 
 
