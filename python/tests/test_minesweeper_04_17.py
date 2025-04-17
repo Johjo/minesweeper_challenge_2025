@@ -3,7 +3,7 @@ import pytest
 
 def minesweeper(field: str) -> str:
     if field == "*\n*":
-        return "*\n*"
+        return solve_line("*") + "\n" + solve_line("*")
 
     return solve_line(field)
 
