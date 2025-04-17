@@ -8,6 +8,6 @@ def minesweeper(field: str) -> str:
 @pytest.mark.parametrize("field, expected", [
     ["", ""]])
 def test_minesweeper(field, expected):
-    assert minesweeper("") == ""
+    assert minesweeper(field) == expected
 
 
