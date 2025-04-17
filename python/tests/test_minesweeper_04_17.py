@@ -2,13 +2,12 @@ import pytest
 
 
 def minesweeper(field: str) -> str:
+    solved_field = ""
     if field == "":
-        solved_field = ""
+        pass
     elif field == ".":
-        solved_field = ""
         solved_field += "0"
     else:
-        solved_field = ""
         solved_field += "0"
         solved_field += "0"
     return solved_field
