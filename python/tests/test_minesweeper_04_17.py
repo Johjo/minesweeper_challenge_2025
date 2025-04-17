@@ -18,8 +18,7 @@ def solve_line(lines, y):
     for x in range(len(lines[y])):
         solved_field += solve_cell(lines, x, y)
 
-
-    return "".join([solve_cell(lines, x, y) for x in range(len(lines[y]))])
+    return solved_field
 
 
 def solve_cell(lines, x, y):
