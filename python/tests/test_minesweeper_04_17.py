@@ -38,11 +38,13 @@ def count_mine_around(line, x, field, y):
 
 
 def is_mine(line, x, field, y):
+    lines = field.split("\n")
+
     if x < 0:
         return False
     if len(line) == x:
         return False
-    return line[x] == "*"
+    return lines[y][x] == "*"
 
 
 @pytest.mark.parametrize("field, expected", [
