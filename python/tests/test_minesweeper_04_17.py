@@ -13,6 +13,8 @@ def minesweeper(field: str) -> str:
 
 
 def solve_cell(field):
+    if field == "*":
+        return "*"
     return "0"
 
 
@@ -21,7 +23,7 @@ def solve_cell(field):
     [".", "0"],
     ["..", "00"],
     ["...", "000"],
-    # ["*", "*"],
+    ["*", "*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
