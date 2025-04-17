@@ -4,9 +4,10 @@ import pytest
 def minesweeper(field: str) -> str:
     if field == "":
         return ""
-    if field == ".":
+    elif field == ".":
         return "0"
-    return "00"
+    else:
+        return "00"
 
 
 @pytest.mark.parametrize("field, expected", [
