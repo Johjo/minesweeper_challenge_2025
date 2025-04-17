@@ -85,6 +85,7 @@ def is_mine(line, x, field, y):
     [".*\n..", "1*\n11"],
     ["..\n*.", "11\n*1"],
     ["..\n.*", "11\n1*"],
+    [".*.**.\n....*.\n..*...", "1*2**2\n1234*2\n01*211"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
