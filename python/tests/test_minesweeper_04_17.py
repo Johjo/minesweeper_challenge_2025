@@ -7,16 +7,14 @@ def minesweeper(field: str) -> str:
     if len(lines) == 2:
         solved_lines.append(solve_line(lines[0]))
         solved_lines.append(solve_line(lines[0]))
-        return "\n".join(solved_lines)
 
     elif len(lines) == 3:
         solved_lines.append(solve_line(lines[0]))
         solved_lines.append(solve_line(lines[0]))
         solved_lines.append(solve_line(lines[0]))
-        return "\n".join(solved_lines)
     else:
         solved_lines.append(solve_line(lines[0]))
-        return "\n".join(solved_lines)
+    return "\n".join(solved_lines)
 
 
 def solve_line(line):
