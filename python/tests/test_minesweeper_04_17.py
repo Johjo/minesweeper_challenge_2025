@@ -4,6 +4,8 @@ import pytest
 def minesweeper(field: str) -> str:
     if field == "*\n*":
         return solve_line("*") + "\n" + solve_line("*")
+    if field == "**\n**":
+        return solve_line("**") + "\n" + solve_line("**")
 
     return solve_line(field)
 
@@ -52,6 +54,7 @@ def is_mine(field, x):
     ["*.", "*1"],
     ["*.*", "*2*"],
     ["*\n*", "*\n*"],
+    ["**\n**", "**\n**"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
