@@ -15,10 +15,11 @@ def minesweeper(field: str) -> str:
 
 def solve_line(lines, y):
     solved_field = ""
-    x = 0
     for x in range(len(lines[y])):
         solved_field += solve_cell(lines, x, y)
-    return solved_field
+
+
+    return "".join([solve_cell(lines, x, y) for x in range(len(lines[y]))])
 
 
 def solve_cell(lines, x, y):
