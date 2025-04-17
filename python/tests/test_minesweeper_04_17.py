@@ -50,8 +50,6 @@ def count_mine_around(lines, line, x, field, y):
 
 
 def is_mine(lines, line, x, field, y):
-    lines = field.split("\n")
-
     if y < 0:
         return False
     if x < 0:
