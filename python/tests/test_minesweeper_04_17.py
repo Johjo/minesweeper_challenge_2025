@@ -54,10 +54,7 @@ def is_mine(line, x, field, y):
     if len(lines) == y:
         return False
 
-    try:
-        return lines[y][x] == "*"
-    except:
-        return False
+    return lines[y][x] == "*"
 
 
 @pytest.mark.parametrize("field, expected", [
