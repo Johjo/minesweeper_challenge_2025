@@ -7,49 +7,49 @@ def minesweeper(field: str) -> str:
 
     y = 0
     while len(lines) > y:
-        solved_lines.append(solve_line(lines[0], field, y))
+        solved_lines.append(solve_line(lines, lines[0], field, y))
         y += 1
 
     return "\n".join(solved_lines)
 
 
-def solve_line(line, field, y):
+def solve_line(lines, line, field, y):
     solved_field = ""
     x = 0
     while len(line) > x:
-        solved_field += solve_cell(line, x, field, y)
+        solved_field += solve_cell(lines, line, x, field, y)
         x += 1
     return solved_field
 
 
-def solve_cell(line, x, field, y):
-    if is_mine(line, x, field, y):
+def solve_cell(lines, line, x, field, y):
+    if is_mine(lines, line, x, field, y):
         return "*"
-    return f"{count_mine_around(line, x, field, y)}"
+    return f"{count_mine_around(lines, line, x, field, y)}"
 
 
-def count_mine_around(line, x, field, y):
+def count_mine_around(lines, line, x, field, y):
     mine_around = 0
-    if is_mine(line, x + 1, field, y):
+    if is_mine(lines, line, x + 1, field, y):
         mine_around += 1
-    if is_mine(line, x - 1, field, y):
+    if is_mine(lines, line, x - 1, field, y):
         mine_around += 1
-    if is_mine(line, x, field, y + 1):
+    if is_mine(lines, line, x, field, y + 1):
         mine_around += 1
-    if is_mine(line, x, field, y - 1):
+    if is_mine(lines, line, x, field, y - 1):
         mine_around += 1
-    if is_mine(line, x - 1, field, y - 1):
+    if is_mine(lines, line, x - 1, field, y - 1):
         mine_around += 1
-    if is_mine(line, x + 1, field, y - 1):
+    if is_mine(lines, line, x + 1, field, y - 1):
         mine_around += 1
-    if is_mine(line, x - 1, field, y + 1):
+    if is_mine(lines, line, x - 1, field, y + 1):
         mine_around += 1
-    if is_mine(line, x + 1, field, y + 1):
+    if is_mine(lines, line, x + 1, field, y + 1):
         mine_around += 1
     return mine_around
 
 
-def is_mine(line, x, field, y):
+def is_mine(lines, line, x, field, y):
     lines = field.split("\n")
 
     if y < 0:
