@@ -34,6 +34,8 @@ def count_mine_around(line, x, field, y):
         mine_around += 1
     if is_mine(line, x - 1, field, y):
         mine_around += 1
+    if is_mine(line, x, field, y + 1):
+        mine_around += 1
     return mine_around
 
 
@@ -44,7 +46,10 @@ def is_mine(line, x, field, y):
         return False
     if len(line) == x:
         return False
-    return lines[y][x] == "*"
+    try:
+        return lines[y][x] == "*"
+    except:
+        return False
 
 
 @pytest.mark.parametrize("field, expected", [
@@ -61,7 +66,7 @@ def is_mine(line, x, field, y):
     ["*\n*", "*\n*"],
     ["**\n**", "**\n**"],
     ["**\n**\n**", "**\n**\n**"],
-    [".\n*", "0\n*"],
+    [".\n*", "1\n*"],
 ])
 def test_minesweeper(field, expected):
     assert minesweeper(field) == expected
