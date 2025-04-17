@@ -5,7 +5,6 @@ def minesweeper(field: str) -> str:
     lines = field.split("\n")
     solved_lines = []
 
-    y = 0
     for y in range(len(lines)):
         solved_lines.append(solve_line(lines, y))
 
