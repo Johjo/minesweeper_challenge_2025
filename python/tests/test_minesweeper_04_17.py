@@ -7,42 +7,42 @@ def minesweeper(field: str) -> str:
 
     y = 0
     while len(lines) > y:
-        solved_lines.append(solve_line(lines[0]))
+        solved_lines.append(solve_line(lines[0], field, y))
         y += 1
 
     return "\n".join(solved_lines)
 
 
-def solve_line(line):
+def solve_line(line, field, y):
     solved_field = ""
     x = 0
     while len(line) > x:
-        solved_field += solve_cell(line, x)
+        solved_field += solve_cell(line, x, field, y)
         x += 1
     return solved_field
 
 
-def solve_cell(line, x):
-    if is_mine(line, x):
+def solve_cell(line, x, field, y):
+    if is_mine(line, x, field, y):
         return "*"
-    return f"{count_mine_around(line, x)}"
+    return f"{count_mine_around(line, x, field, y)}"
 
 
-def count_mine_around(field, x):
+def count_mine_around(line, x, field, y):
     mine_around = 0
-    if is_mine(field, x + 1):
+    if is_mine(line, x + 1, field, y):
         mine_around += 1
-    if is_mine(field, x - 1):
+    if is_mine(line, x - 1, field, y):
         mine_around += 1
     return mine_around
 
 
-def is_mine(field, x):
+def is_mine(line, x, field, y):
     if x < 0:
         return False
-    if len(field) == x:
+    if len(line) == x:
         return False
-    return field[x] == "*"
+    return line[x] == "*"
 
 
 @pytest.mark.parametrize("field, expected", [
